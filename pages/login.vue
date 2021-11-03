@@ -49,6 +49,7 @@ export default {
     InputDefault,
     PageHeader,
     AuthBox
-  }
+  },
+  layout: 'auth'
 }
 </script>
