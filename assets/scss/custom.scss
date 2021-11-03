@@ -154,27 +154,42 @@
   .page-wrapper {
     display: flex;
     height: 100%;
-    padding-left: 72px;
   }
 
   .side-nav {
+    display: hidden;
     flex-shrink: 0;
     background: $blue-dark;
     color: white;
     height: auto;
-    width: 72px;
+    width: 200px;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
 
-    &__logo {
+    &__floating-action-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $blue-dark;
+      border-radius: 999px;
+      width: 48px;
+      height: 48px;
+      margin: 16px 16px;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
-      padding: 16px 16px 0px 24px;
-      margin-bottom: 100px;
-      img {
-        width: 32px;
+      svg {
+        fill: white;
       }
+    }
+
+    &__logo {
+      padding: 32px 24px 0px 24px;
+      margin-bottom: 100px;
     }
 
     &__item {
@@ -196,10 +211,6 @@
           fill: white;
         }
       }
-
-      &-label {
-        display: none;
-      }
     }
   }
 
@@ -216,7 +227,8 @@
         align-items: start;
       }
 
-      &__right {}
+      &__right {
+      }
 
       &__go-back {
         margin-right: 16px;
@@ -238,7 +250,8 @@
     }
   }
 
-  .account-progress {}
+  .account-progress {
+  }
 
   .page-inner {
     display: flex;
@@ -300,7 +313,6 @@
     }
 
     .content__form {
-
       &-group {
         display: grid;
         grid-template-columns: 1fr;

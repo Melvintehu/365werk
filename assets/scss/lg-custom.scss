@@ -25,21 +25,14 @@
   }
 
   .side-nav {
+    display: block !important;
     width: 200px;
 
-    &__logo {
-      padding: 32px 24px 0px 24px;
-      margin-bottom: 100px;
-
-      img {
-        width: auto;
-      }
+    &__floating-action-toggle {
+      display: none;
     }
+    &__logo {
 
-    &__item {
-      &-label {
-        display: inline-flex;
-      }
     }
   }
 
