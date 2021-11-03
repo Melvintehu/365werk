@@ -41,94 +41,89 @@
           </div>
         </div>
         <!-- Page content-->
-        <div class="page-inner__content">
-          <div class="page-inner__content-wrapper">
-            <h1 class="page-inner__content-title">
-              Personal details
-            </h1>
-            <div class="page-inner__content-section">
-              <h2 class="page-inner__content-section-title">
-                Contact information
-              </h2>
-
-              <div class="content__form">
-                <div class="content__form-group">
-                  <input-default name="email" placeholder="Enter your email address">
-                    <template slot="label">
-                      Email address
-                    </template>
-                  </input-default>
-                  <input-default name="email" placeholder="Enter your email address">
-                    <template slot="label">
-                      Phone number
-                    </template>
-                  </input-default>
-                </div>
-              </div>
-            </div>
-
-            <div class="page-inner__content-section">
-              <h2 class="page-inner__content-section-title">
-                Address
-              </h2>
-              <div class="content__form">
-                <div class="content__form-address">
-                  <div class="content__form-group">
-                    <input-default name="email" placeholder="1234AB">
-                      <template slot="label">
-                        Postal code
-                      </template>
-                    </input-default>
-                  </div>
-                  <div class="content__form-address-house-details">
-                    <input-default name="email" placeholder="123">
-                      <template slot="label">
-                        House number
-                      </template>
-                    </input-default>
-                    <input-default name="email" placeholder="A">
-                      <template slot="label">
-                        Add on
-                      </template>
-                    </input-default>
-                  </div>
-                </div>
-                <div class="content__form-group">
-                  <input-default name="email" placeholder="Enter your street">
-                    <template slot="label">
-                      Street
-                    </template>
-                  </input-default>
-                  <input-default name="email" placeholder="Enter your city">
-                    <template slot="label">
-                      City
-                    </template>
-                  </input-default>
-                </div>
-              </div>
-            </div>
-
-            <div class="page-inner__content-section">
-              <h2 class="page-inner__content-section-title">
-                Personal details
-              </h2>
-              <div class="content__form">
-                <div class="content__form-group">
-                  <input-default name="email" placeholder="Enter your email address">
-                    <template slot="label">
-                      First name
-                    </template>
-                  </input-default>
-                  <input-default name="email" placeholder="Enter your email address">
-                    <template slot="label">
-                      surname
-                    </template>
-                  </input-default>
-                </div>
+        <page-content>
+          <template slot="title">
+            Personal details
+          </template>
+          <div class="page-inner__content-section">
+            <h2 class="page-inner__content-section-title">
+              Contact information
+            </h2>
+            <div class="content__form">
+              <div class="content__form-group">
+                <input-default name="email" placeholder="Enter your email address">
+                  <template slot="label">
+                    Email address
+                  </template>
+                </input-default>
+                <input-default name="email" placeholder="Enter your email address">
+                  <template slot="label">
+                    Phone number
+                  </template>
+                </input-default>
               </div>
             </div>
           </div>
-        </div>
+          <div class="page-inner__content-section">
+            <h2 class="page-inner__content-section-title">
+              Address
+            </h2>
+            <div class="content__form">
+              <div class="content__form-address">
+                <div class="content__form-group">
+                  <input-default name="email" placeholder="1234AB">
+                    <template slot="label">
+                      Postal code
+                    </template>
+                  </input-default>
+                </div>
+                <div class="content__form-address-house-details">
+                  <input-default name="email" placeholder="123">
+                    <template slot="label">
+                      House number
+                    </template>
+                  </input-default>
+                  <input-default name="email" placeholder="A">
+                    <template slot="label">
+                      Add on
+                    </template>
+                  </input-default>
+                </div>
+              </div>
+              <div class="content__form-group">
+                <input-default name="email" placeholder="Enter your street">
+                  <template slot="label">
+                    Street
+                  </template>
+                </input-default>
+                <input-default name="email" placeholder="Enter your city">
+                  <template slot="label">
+                    City
+                  </template>
+                </input-default>
+              </div>
+            </div>
+          </div>
+          <div class="page-inner__content-section">
+            <h2 class="page-inner__content-section-title">
+              Personal details
+            </h2>
+            <div class="content__form">
+              <div class="content__form-group">
+                <input-default name="email" placeholder="Enter your email address">
+                  <template slot="label">
+                    First name
+                  </template>
+                </input-default>
+                <input-default name="email" placeholder="Enter your email address">
+                  <template slot="label">
+                    surname
+                  </template>
+                </input-default>
+              </div>
+            </div>
+          </div>
+        </page-content>
       </div>
     </div>
   </div>
@@ -137,9 +132,11 @@
 import InputDefault from '../components/form/InputDefault'
 import SideNav from '../components/account/SideNav'
 import TopBar from '../components/account/TopBar'
+import PageContent from '../components/account/PageContent'
 
 export default {
   components: {
+    PageContent,
     TopBar,
     SideNav,
     InputDefault
