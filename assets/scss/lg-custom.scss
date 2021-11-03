@@ -20,7 +20,28 @@
     width: 50%;
   }
 
+  .page-wrapper {
+    padding-left: 200px;
+  }
 
+  .side-nav {
+    width: 200px;
+
+    &__logo {
+      padding: 32px 24px 0px 24px;
+      margin-bottom: 100px;
+
+      img {
+        width: auto;
+      }
+    }
+
+    &__item {
+      &-label {
+        display: inline-flex;
+      }
+    }
+  }
 
 }
 

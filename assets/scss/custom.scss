@@ -154,7 +154,7 @@
   .page-wrapper {
     display: flex;
     height: 100%;
-    padding-left: 200px;
+    padding-left: 72px;
   }
 
   .side-nav {
@@ -162,22 +162,28 @@
     background: $blue-dark;
     color: white;
     height: auto;
-    width: 200px;
+    width: 72px;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
+
     &__logo {
-      padding: 32px 24px 0px 24px;
+
+      padding: 16px 16px 0px 24px;
       margin-bottom: 100px;
+      img {
+        width: 32px;
+      }
     }
 
     &__item {
       display: inline-flex;
       align-items: center;
+      color: white;
       font-size: 14px;
       width: 100%;
-      padding: 0 24px;
+      padding: 8px 24px;
 
       &--hover:hover {
         background: darken($blue-dark, 5);
@@ -190,9 +196,9 @@
           fill: white;
         }
       }
-      &-link {
-        color: white;
-        padding: 16px 0;
+
+      &-label {
+        display: none;
       }
     }
   }
@@ -307,7 +313,7 @@
           width: 100%;
           display: grid;
           grid-template-columns: 1fr;
-          
+
         }
       }
     }
