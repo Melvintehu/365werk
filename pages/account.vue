@@ -153,6 +153,7 @@ export default {
     SideNav,
     InputDefault
   },
-  layout: 'account'
+  layout: 'account',
+  middleware: 'auth'
 }
 </script>

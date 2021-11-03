@@ -31,7 +31,7 @@
           </template>
         </input-default>
 
-        <button slot="button" class="button__main button__main--hover">
+        <button @click="login()" slot="button" class="button__main button__main--hover">
           Yes, log me in
         </button>
       </auth-box>
@@ -50,6 +50,13 @@ export default {
     PageHeader,
     AuthBox
   },
-  layout: 'auth'
+  layout: 'auth',
+  methods: {
+    login () {
+      this.$store.dispatch('auth/login').then(() => {
+        this.$router.push('account')
+      })
+    }
+  }
 }
 </script>
