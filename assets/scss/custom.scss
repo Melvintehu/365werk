@@ -151,18 +151,53 @@
 
   /* ACCOUNT */
 
+  .page-wrapper {
+    display: flex;
+    height: 100vh;
+  }
+
   .side-nav {
     background: $blue-dark;
+    color: white;
+    height: 100%;
+    width: 200px;
 
-    &__logo {}
+    &__logo {
+      padding: 32px 24px 0px 24px;
+      margin-bottom: 64px;
+    }
+
     &__item {
-      &__icon {}
-      &__link {}
+      display: inline-flex;
+      align-items: center;
+      font-size: 14px;
+      width: 100%;
+      padding: 0 24px;
+
+      &--hover:hover {
+        background: darken($blue-dark, 5);
+      }
+
+      &-icon {
+        margin-right: 8px;
+
+        & svg {
+          fill: white;
+        }
+      }
+      &-link {
+
+        color: white;
+        padding: 16px 0;
+
+
+      }
     }
   }
 
   .page {
     &-top-bar {
+      padding: 32px;
       &__left {}
       &__right {}
 
@@ -173,9 +208,7 @@
 
   .account-progress {}
 
-  .page-inner {
-
-  }
+  .page-inner {}
 
 }
 
