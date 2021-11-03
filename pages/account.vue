@@ -1,10 +1,10 @@
 <template>
   <div class="page-wrapper">
-    <side-nav/>
+    <side-nav />
 
     <div class="page">
       <!--Page top bar-->
-      <top-bar/>
+      <top-bar />
       <div class="page-inner">
         <!--Page nav-->
         <div class="page-inner__nav">
@@ -19,7 +19,7 @@
                 viewBox="0 0 24 24"
                 width="24px"
                 fill="#000000"
-              ><rect fill="none" height="24" width="24"/><path
+              ><rect fill="none" height="24" width="24" /><path
                 d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"
               /></svg>
             </span>
@@ -53,10 +53,13 @@
               <div class="content__form-group">
                 <input-validator
                   :rules="[
-                    { type: 'minLength', rule: 5, message: 'a minimal of 5 character is mandatory.' },
-                    { type: 'maxLength', rule: 8, message: 'cannot contain more than 8 characters.' }
+                    { type: 'email', message: 'Your email is invalid.' },
+                    { type: 'required', message: 'Your email address is required.' },
+                    { type: 'minLength', rule: 2, message: 'a minimal of 2 character is mandatory.' },
+                    { type: 'maxLength', rule: 255, message: 'cannot contain more than 255 characters.' }
                   ]"
-                  message="Your password should contain">
+                  message="Your email contains errors"
+                >
                   <input-default name="email" placeholder="Enter your email address">
                     <template slot="label">
                       Email address

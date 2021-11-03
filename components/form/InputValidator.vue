@@ -88,7 +88,9 @@ export default {
       input: null,
       validators: {
         minLength: this.minLength,
-        maxLength: this.maxLength
+        maxLength: this.maxLength,
+        required: this.required,
+        email: this.email
       },
       errorMessages: []
     }
@@ -123,6 +125,13 @@ export default {
     },
     maxLength (value, rule) {
       return value.length > rule
+    },
+    required (value) {
+      return value === undefined || value === null || value === ''
+    },
+    email (value) {
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      return !re.test(String(value).toLowerCase())
     }
   }
 }
