@@ -233,7 +233,33 @@
 
   .account-progress {}
 
-  .page-inner {}
+  .page-inner {
+    display: flex;
+
+    &__nav {
+      width: 256px;
+      padding: 56px 32px;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+
+        &--active &-link {
+          font-weight: 700;
+        }
+
+        &--active &-icon {
+          display: inline-flex;
+        }
+
+        &-link {
+          color: $blue-dark;
+        }
+      }
+    }
+  }
 
 }
 
