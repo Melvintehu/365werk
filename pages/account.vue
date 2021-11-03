@@ -1,33 +1,10 @@
 <template>
   <div class="page-wrapper">
-    <side-nav />
+    <side-nav/>
 
     <div class="page">
       <!--Page top bar-->
-      <div class="page-top-bar">
-        <div class="page-top-bar__left">
-          <span class="page-top-bar__go-back">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 0 24 24"
-              width="24px"
-              fill="#000000"
-            ><rect fill="none" height="24" width="24" /><path d="M9,19l1.41-1.41L5.83,13H22V11H5.83l4.59-4.59L9,5l-7,7L9,19z" /></svg>
-          </span>
-          <div>
-            <h2 class="page-top-bar__title">
-              Account
-            </h2>
-            <p class="page-top-bar__description">
-              We stored your account details here.
-            </p>
-          </div>
-        </div>
-        <div class="page-top-bar__right">
-          <progress-bar />
-        </div>
-      </div>
+      <top-bar/>
       <div class="page-inner">
         <!--Page nav-->
         <div class="page-inner__nav">
@@ -42,7 +19,9 @@
                 viewBox="0 0 24 24"
                 width="24px"
                 fill="#000000"
-              ><rect fill="none" height="24" width="24" /><path d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z" /></svg>
+              ><rect fill="none" height="24" width="24"/><path
+                d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"
+              /></svg>
             </span>
           </div>
           <div class="page-inner__nav-item">
@@ -157,9 +136,14 @@
 <script>
 import InputDefault from '../components/form/InputDefault'
 import SideNav from '../components/account/SideNav'
-import ProgressBar from '../components/account/ProgressBar'
+import TopBar from '../components/account/TopBar'
+
 export default {
-  components: { ProgressBar, SideNav, InputDefault },
+  components: {
+    TopBar,
+    SideNav,
+    InputDefault
+  },
   layout: 'account'
 }
 </script>
