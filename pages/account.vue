@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="page-top-bar__right">
-          <div class="account-progress" />
+          <div class="account-progress"></div>
         </div>
       </div>
       <div class="page-inner">
@@ -64,7 +64,9 @@
         <!-- Page content-->
         <div class="page-inner__content">
           <div class="page-inner__content-wrapper">
-            <h1 class="page-inner__content-title">Personal details</h1>
+            <h1 class="page-inner__content-title">
+              Personal details
+            </h1>
             <div class="page-inner__content-section">
               <h2 class="page-inner__content-section-title">
                 Contact information

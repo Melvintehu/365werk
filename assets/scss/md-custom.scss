@@ -43,9 +43,9 @@
   .auth-box {
     width: 70%;
     padding: 32px 48px 48px 48px;
-    -webkit-box-shadow: 5px 5px 44px -7px rgba(0,0,0,1);
-    -moz-box-shadow: 5px 5px 44px -7px rgba(0,0,0,1);
-    box-shadow: 5px 5px 44px -7px rgba(0,0,0,1);
+    -webkit-box-shadow: 5px 5px 44px -7px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 5px 5px 44px -7px rgba(0, 0, 0, 1);
+    box-shadow: 5px 5px 44px -7px rgba(0, 0, 0, 1);
 
     &__header {
       margin-bottom: 72px;
@@ -53,6 +53,27 @@
 
     &__button-wrapper {
       margin-top: 72px;
+    }
+  }
+
+  .page-inner {
+    flex-direction: row;
+
+    &__nav {
+      padding: 56px 32px;
+      width: 256px;
+
+      &-item {
+        margin-bottom: 24px;
+      }
+    }
+
+    &__content {
+      padding: 32px 32px;
+
+      &-wrapper {
+        padding: 40px 48px;
+      }
     }
   }
 
