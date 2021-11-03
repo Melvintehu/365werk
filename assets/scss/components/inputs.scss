@@ -1,0 +1,38 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+
+  &__label-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 8px;
+  }
+
+  &__label {
+    color: $blue-dark;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  &__default {
+    border: 1px solid $blue-gray-darker;
+    border-radius: 4px;
+    height: 48px;
+    max-width: 100%;
+    padding-left: 16px;
+    background: $gray;
+
+    &::placeholder {
+      color: $gray-dark;
+      font-size: 14px;
+    }
+  }
+
+  &__help {
+    color: $gray-dark;
+    font-size: 14px;
+    margin: 0px;
+  }
+}

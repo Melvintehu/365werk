@@ -1,4 +1,18 @@
+@import "normalize.scss";
 @import "variables.scss";
+
+
+
+// Global Styles
+
+body {
+  font-family: Poppins, 'sans-serif';
+}
+
+
+// components
+@import "components/inputs.scss";
+@import "components/buttons.scss";
 
 @import "custom.scss";
 @import "xs-custom.scss";

@@ -1,3 +1,61 @@
 @media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .nav {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    &-link__blob {
+
+      &-link {
+        width: auto;
+        padding-left: 4px;
+        padding-right: 16px;
+        margin-left: 64px;
+      }
+
+      &-img {
+        position: absolute;
+        top: -100px;
+        right: -30px;
+        display: block;
+      }
+
+      &-icon svg {
+        margin-right: 16px;
+        margin-left: 8px;
+      }
+
+      &-label {
+        display: inline-block;
+      }
+
+    }
+  }
+
+  .page-header {
+    width: 80%;
+    padding-bottom: 64px;
+  }
+
+  .auth-box {
+    width: 70%;
+    padding: 32px 48px 48px 48px;
+    -webkit-box-shadow: 5px 5px 44px -7px rgba(0,0,0,1);
+    -moz-box-shadow: 5px 5px 44px -7px rgba(0,0,0,1);
+    box-shadow: 5px 5px 44px -7px rgba(0,0,0,1);
+
+    &__header {
+      margin-bottom: 72px;
+    }
+
+    &__button-wrapper {
+      margin-top: 72px;
+    }
+  }
 
 }

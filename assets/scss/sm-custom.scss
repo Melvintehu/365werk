@@ -1,3 +1,19 @@
 @media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
+
+
+  .auth-box__header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &-link-label {
+      line-height: 0px;
+    }
+  }
 }

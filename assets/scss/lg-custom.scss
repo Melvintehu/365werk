@@ -1,4 +1,23 @@
 @media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
 
+  .page-header {
+    width: 80%;
+
+    &__title {
+      font-size: 80px;
+    }
+
+    &__sub-title {
+      font-size: 30px;
+    }
+
+  }
+
+  .auth-box {
+    width: 50%;
+  }
 }
 
