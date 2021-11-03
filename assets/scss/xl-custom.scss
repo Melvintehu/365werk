@@ -10,8 +10,25 @@
   .auth-box {
     width: 40%;
   }
+  .page-inner {
+    .content__form {
 
+      &-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 24px;
+      }
 
+      &-address {
+        &-house-details {
+          width: 50%;
+          padding-right: 12px;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 0 24px;
+        }
+      }
+    }
+  }
 }
 
 

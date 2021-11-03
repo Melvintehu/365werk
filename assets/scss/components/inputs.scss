@@ -1,7 +1,11 @@
+
+
 .input {
   display: flex;
   flex-direction: column;
   margin-bottom: 32px;
+  width: 100%;
+  min-width: 0;
 
   &__label-wrapper {
     display: flex;
@@ -19,6 +23,7 @@
   &__default {
     border: 1px solid $blue-gray-darker;
     border-radius: 4px;
+    font-size: 14px;
     height: 48px;
     max-width: 100%;
     padding-left: 16px;
