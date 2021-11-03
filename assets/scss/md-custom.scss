@@ -56,6 +56,24 @@
     }
   }
 
+  .page {
+    &-top-bar {
+      &__go-back {
+        display: inline-flex;
+        margin-right: 16px;
+      }
+    }
+  }
+
+  .account-progress {
+    padding-left: 40px;
+    position: relative;
+
+    &__percentage {
+      display: block;
+    }
+  }
+
   .page-inner {
     flex-direction: row;
 

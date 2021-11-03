@@ -10,6 +10,21 @@
   .auth-box {
     width: 40%;
   }
+
+
+  .page {
+    &-top-bar {
+      &__left {
+        width: 50%;
+      }
+
+      &__right {
+        width: 50%;
+      }
+    }
+  }
+
+
   .page-inner {
     .content__form {
 
