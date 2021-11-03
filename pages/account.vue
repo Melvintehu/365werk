@@ -51,11 +51,18 @@
             </h2>
             <div class="content__form">
               <div class="content__form-group">
-                <input-default name="email" placeholder="Enter your email address">
-                  <template slot="label">
-                    Email address
-                  </template>
-                </input-default>
+                <input-validator
+                  :rules="[
+                    { type: 'minLength', rule: 5, message: 'a minimal of 5 character is mandatory.' },
+                    { type: 'maxLength', rule: 8, message: 'cannot contain more than 8 characters.' }
+                  ]"
+                  message="Your password should contain">
+                  <input-default name="email" placeholder="Enter your email address">
+                    <template slot="label">
+                      Email address
+                    </template>
+                  </input-default>
+                </input-validator>
                 <input-default name="email" placeholder="Enter your email address">
                   <template slot="label">
                     Phone number
@@ -133,9 +140,11 @@ import InputDefault from '../components/form/InputDefault'
 import SideNav from '../components/account/SideNav'
 import TopBar from '../components/account/TopBar'
 import PageContent from '../components/account/PageContent'
+import InputValidator from '../components/form/InputValidator'
 
 export default {
   components: {
+    InputValidator,
     PageContent,
     TopBar,
     SideNav,
