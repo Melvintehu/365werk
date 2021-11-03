@@ -14,6 +14,14 @@ export const actions = {
         resolve()
       }, 1000)
     })
+  },
+  logout (state, payload) {
+    return new Promise((resolve, reject) => {
+      localStorage.removeItem('user')
+      setTimeout(() => {
+        resolve()
+      }, 1000)
+    })
   }
 }
 
