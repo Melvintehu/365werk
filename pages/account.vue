@@ -8,6 +8,7 @@
       <div class="page-inner">
         <!--Page nav-->
         <div class="page-inner__nav">
+          <account-page-nav-item></account-page-nav-item>
           <div class="page-inner__nav-item page-inner__nav-item--active">
             <NuxtLink class="page-inner__nav-item-link" to="/account">
               Personal details
