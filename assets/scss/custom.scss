@@ -155,6 +155,21 @@
     height: 100%;
   }
 
+  .language-switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    &__flag {
+     width: 1.5rem;
+    }
+
+    &__icon svg{
+      fill: white;
+    }
+  }
+
   .side-nav {
     flex-shrink: 0;
     background: $blue-dark;
@@ -166,6 +181,10 @@
     left: 0;
     bottom: 0;
     z-index: 50;
+
+    &__language-switch-wrapper {
+      padding: 0.5rem 1.5rem;
+    }
 
     &__floating-action-toggle {
       display: flex;
