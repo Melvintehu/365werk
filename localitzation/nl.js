@@ -10,5 +10,9 @@ export default {
   enter_password: 'Voer je wachtwoord in',
   enter_email: 'Voer je email in',
   register: 'Registreren',
-  log_in_to_your_account: 'Inloggen op je account'
+  log_in_to_your_account: 'Inloggen op je account',
+  // account
+  account: 'Account',
+  reset_password: 'Wijzig wachtwoord',
+  log_out: 'Uitloggen'
 }
