@@ -39,7 +39,7 @@ export default {
   address: 'Adres',
   account_sub_title: 'We hebben je gegevens hier opgeslagen.',
   account_progress: 'Account progressie',
-  account_progress_sub_title: 'Maak je account compleet voor beter baankansen.',
+  account_progress_sub_title: 'Voltooi het voor nog betere kansen op werk.',
   // Language
   dutch: 'Nederlands',
   english: 'English',
