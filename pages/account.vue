@@ -81,8 +81,8 @@
                 <div class="content__form-group">
                   <input-validator
                     :rules="[
-                    { type: 'postalCode', message: 'Your postal code is invalid. (1234 AB)' }
-                  ]"
+                      { type: 'postalCode', message: 'Your postal code is invalid. (1234 AB)' }
+                    ]"
                     message="Your postal code contains errors"
                   >
                     <input-default name="postal_code" placeholder="1234 AB">
@@ -95,9 +95,9 @@
                 <div class="content__form-address-house-details">
                   <input-validator
                     :rules="[
-                    { type: 'required', message: 'Your house number is required. (12)' },
-                    { type: 'number', message: 'Your house number should only contain numbers. (12)' },
-                  ]"
+                      { type: 'required', message: 'Your house number is required. (12)' },
+                      { type: 'number', message: 'Your house number should only contain numbers. (12)' },
+                    ]"
                     message="Your house number contains errors"
                   >
                     <input-default name="house_number" placeholder="123">
@@ -106,11 +106,18 @@
                       </template>
                     </input-default>
                   </input-validator>
-                  <input-default name="email" placeholder="A">
-                    <template slot="label">
-                      Add on
-                    </template>
-                  </input-default>
+                  <input-validator
+                    :rules="[
+                      { type: 'letter', message: 'Your house number add on should only contain letters. (A)' },
+                    ]"
+                    message="Your house number add on contains errors"
+                  >
+                    <input-default name="email" placeholder="A">
+                      <template slot="label">
+                        Add on
+                      </template>
+                    </input-default>
+                  </input-validator>
                 </div>
               </div>
               <div class="content__form-group">

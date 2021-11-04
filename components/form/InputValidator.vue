@@ -74,10 +74,12 @@ import maxLength from '~/mixins/validators/maxLength'
 import phoneNumber from '~/mixins/validators/phoneNumber'
 import postalCode from '~/mixins/validators/postalCode'
 import number from '~/mixins/validators/number'
+import letter from '~/mixins/validators/letter'
 
 export default {
   mixins: [
     email,
+    letter,
     number,
     minLength,
     maxLength,
@@ -110,7 +112,8 @@ export default {
         email: this.email,
         phoneNumber: this.phoneNumber,
         postalCode: this.postalCode,
-        number: this.number
+        number: this.number,
+        letter: this.letter
       },
       errorMessages: []
     }
