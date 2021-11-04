@@ -59,6 +59,7 @@
                 </input-validator>
                 <input-validator
                   :rules="[
+                    { type: 'required', message: 'Your phone number is required.' },
                     { type: 'phoneNumber', message: 'Your phone number is invalid. (+31612345678)' }
                   ]"
                   message="Your phone number contains errors"
@@ -81,6 +82,7 @@
                 <div class="content__form-group">
                   <input-validator
                     :rules="[
+                      { type: 'required', message: 'Your postal code is required.' },
                       { type: 'postalCode', message: 'Your postal code is invalid. (1234 AB)' }
                     ]"
                     message="Your postal code contains errors"
@@ -95,7 +97,7 @@
                 <div class="content__form-address-house-details">
                   <input-validator
                     :rules="[
-                      { type: 'required', message: 'Your house number is required. (12)' },
+                      { type: 'required', message: 'Your house number is required.' },
                       { type: 'number', message: 'Your house number should only contain numbers. (12)' },
                     ]"
                     message="Your house number contains errors"
