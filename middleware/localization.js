@@ -4,4 +4,5 @@ export default function ({ store, redirect }) {
   if (currentLanguage === null) {
     store.commit('localization/setLanguage', 'nl')
   }
+  store.commit('localization/setLanguage', currentLanguage)
 }

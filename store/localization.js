@@ -24,7 +24,7 @@ export const getters = {
   getCurrentLanguage: (state) => {
     return state.language
   },
-  getTranslation: state => (key) => {
+  getTranslation: (state, commit) => (key) => {
     return state.languages[state.language][key]
   }
 }
