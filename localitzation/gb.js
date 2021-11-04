@@ -14,5 +14,8 @@ export default {
   // account
   account: 'Account',
   reset_password: 'Reset password',
-  log_out: 'Log out'
+  log_out: 'Log out',
+  // Language
+  dutch: 'Nederlands',
+  english: 'English'
 }

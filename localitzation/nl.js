@@ -14,5 +14,8 @@ export default {
   // account
   account: 'Account',
   reset_password: 'Wijzig wachtwoord',
-  log_out: 'Uitloggen'
+  log_out: 'Uitloggen',
+  // Language
+  dutch: 'Nederlands',
+  english: 'English'
 }
