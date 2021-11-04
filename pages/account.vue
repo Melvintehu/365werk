@@ -265,6 +265,8 @@ export default {
         city: this.city,
         name: this.name,
         surname: this.surname
+      }).then(() => {
+        this.notify('Yes! Success!', 'You have successfully updated your profile!')
       })
     }
   }
