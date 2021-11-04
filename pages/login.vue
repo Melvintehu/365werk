@@ -2,37 +2,37 @@
   <div class="auth-page">
     <div class="container">
       <page-header>
-        {{ getTranslation('login_page_title') }}
+        {{ translate('login_page_title') }}
         <template slot="subTitle">
-          {{ getTranslation('login_page_sub_title') }}
+          {{ translate('login_page_sub_title') }}
         </template>
       </page-header>
 
       <auth-box links-to="/register">
         <template slot="label">
-          {{ getTranslation('login') }}
+          {{ translate('login') }}
         </template>
         <template slot="linkLabel">
-          {{ getTranslation('no_account') }}
+          {{ translate('no_account') }}
         </template>
 
-        <input-default name="email" :placeholder="getTranslation('enter_email')">
+        <input-default name="email" :placeholder="translate('enter_email')">
           <template slot="label">
-            {{ getTranslation('email_address') }}
+            {{ translate('email_address') }}
           </template>
         </input-default>
 
-        <input-default to="/forgot-password" name="password" type="password" :placeholder="getTranslation('enter_password')">
+        <input-default to="/forgot-password" name="password" type="password" :placeholder="translate('enter_password')">
           <template slot="label">
-            {{ getTranslation('password') }}
+            {{ translate('password') }}
           </template>
           <template slot="help">
-            {{ getTranslation('forgot_password') }}
+            {{ translate('forgot_password') }}
           </template>
         </input-default>
 
         <button slot="button" class="button__main button__main--hover" @click="login()">
-          {{ getTranslation('login_button') }}
+          {{ translate('login_button') }}
         </button>
       </auth-box>
     </div>

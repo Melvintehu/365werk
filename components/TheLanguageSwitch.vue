@@ -11,7 +11,7 @@
             <img src="~/assets/img/country-flags/svg/nl.svg" alt="">
           </figure>
           <p class="language-switch__country-label">
-            {{ getTranslation('dutch') }}
+            {{ translate('dutch') }}
           </p>
         </div>
         <div class="language-switch__country" @click="switchLanguage('gb')">
@@ -19,7 +19,7 @@
             <img src="~/assets/img/country-flags/svg/gb.svg" alt="">
           </figure>
           <p class="language-switch__country-label">
-            {{ getTranslation('english') }}
+            {{ translate('english') }}
           </p>
         </div>
       </div>

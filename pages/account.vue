@@ -9,7 +9,7 @@
         <!--Page nav-->
         <div class="page-inner__nav">
           <account-page-nav-item to="/account">
-            Personal details
+            {{ translate('personal_details') }}
             <svg
               slot="icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -22,51 +22,51 @@
             /></svg>
           </account-page-nav-item>
           <account-page-nav-item to="#">
-            Preferences
+            {{ translate('preferences') }}
           </account-page-nav-item>
           <account-page-nav-item to="#">
-            Work experience
+            {{ translate('work_experience') }}
           </account-page-nav-item>
           <account-page-nav-item to="#">
-            Educations
+            {{ translate('educations') }}
           </account-page-nav-item>
         </div>
         <!-- Page content-->
         <page-content>
           <template slot="title">
-            Personal details
+            {{ translate('personal_details') }}
           </template>
           <div class="page-inner__content-section">
             <h2 class="page-inner__content-section-title">
-              Contact information
+              {{ translate('contact_information') }}
             </h2>
             <div class="content__form">
               <div class="content__form-group">
                 <input-validator
                   :rules="[
-                    { type: 'email', message: 'Email is invalid.' },
-                    { type: 'required', message: 'Email address is required.' },
-                    { type: 'minLength', rule: 2, message: 'a minimal of 2 character is mandatory.' },
-                    { type: 'maxLength', rule: 255, message: 'cannot contain more than 255 characters.' }
+                    { type: 'required', message: translate('required', translate('email_address')) },
+                    { type: 'email', message: translate('invalid', translate('email_address')) },
+                    { type: 'minLength', rule: 2, message: translate('min_length', 2) },
+                    { type: 'maxLength', rule: 255, message: translate('max_length', 255) }
                   ]"
-                  message="Your email contains errors"
+                  :message="translate('validation_errors', translate('email_address'))"
                 >
-                  <input-default name="email" placeholder="Enter your email address">
+                  <input-default name="email" :placeholder="translate('placeholder_email')">
                     <template slot="label">
-                      Email address
+                      {{ translate('email_address') }}
                     </template>
                   </input-default>
                 </input-validator>
                 <input-validator
                   :rules="[
-                    { type: 'required', message: 'Phone number is required.' },
-                    { type: 'phoneNumber', message: 'Phone number is invalid. (+31612345678)' }
+                    { type: 'required', message: translate('required', translate('phone_number')) },
+                    { type: 'phoneNumber', message: translate('invalid', `${translate('phone_number')} (+31612345678)`) }
                   ]"
-                  message="Your phone number contains errors"
+                  :message="translate('validation_errors', translate('phone_number'))"
                 >
-                  <input-default name="phone" placeholder="Enter your phone number">
+                  <input-default name="phone" :placeholder="translate('placeholder_phone_number')">
                     <template slot="label">
-                      Phone number
+                      {{ translate('phone_number') }}
                     </template>
                   </input-default>
                 </input-validator>
@@ -75,7 +75,7 @@
           </div>
           <div class="page-inner__content-section">
             <h2 class="page-inner__content-section-title">
-              Address
+              {{ translate('address') }}
             </h2>
             <div class="content__form">
               <div class="content__form-address">
@@ -85,11 +85,11 @@
                       { type: 'required', message: 'Postal code is required.' },
                       { type: 'postalCode', message: 'Postal code is invalid. (1234 AB)' }
                     ]"
-                    message="your postal code contains errors"
+                    :message="translate('validation_errors', translate('postal_code'))"
                   >
                     <input-default name="postal_code" placeholder="1234 AB">
                       <template slot="label">
-                        Postal code
+                        {{ translate('postal_code') }}
                       </template>
                     </input-default>
                   </input-validator>
@@ -100,11 +100,11 @@
                       { type: 'required', message: 'House number is required.' },
                       { type: 'number', message: 'House number should only contain numbers. (12)' },
                     ]"
-                    message="your house number contains errors"
+                    :message="translate('validation_errors', translate('house_number'))"
                   >
                     <input-default name="house_number" placeholder="123">
                       <template slot="label">
-                        House number
+                        {{ translate('house_number') }}
                       </template>
                     </input-default>
                   </input-validator>
@@ -112,11 +112,11 @@
                     :rules="[
                       { type: 'letter', message: 'House number add on should only contain letters. (A)' },
                     ]"
-                    message="House number add on contains errors"
+                    :message="translate('validation_errors', translate('house_number_add_on'))"
                   >
                     <input-default name="add_on" placeholder="A">
                       <template slot="label">
-                        Add on
+                        {{ translate('add_on') }}
                       </template>
                     </input-default>
                   </input-validator>
@@ -129,11 +129,11 @@
                     { type: 'minLength', rule: 1, message: 'Street has a minimum of 1 characters.' },
                     { type: 'maxLength', rule: 55, message: 'Street has a maximum of 55 characters.' }
                   ]"
-                  message="Your street contains errors"
+                  :message="translate('validation_errors', translate('street'))"
                 >
-                  <input-default name="street" placeholder="Enter your street">
+                  <input-default name="street" :placeholder="translate('placeholder_street')">
                     <template slot="label">
-                      Street
+                      {{ translate('street') }}
                     </template>
                   </input-default>
                 </input-validator>
@@ -143,11 +143,11 @@
                     { type: 'minLength', rule: 2, message: 'City has a minimum of 2 characters.' },
                     { type: 'maxLength', rule: 25, message: 'City has a maximum of 25 characters.' }
                   ]"
-                  message="Street contains errors"
+                  :message="translate('validation_errors', translate('city'))"
                 >
-                  <input-default name="street" placeholder="Enter your city">
+                  <input-default name="street" :placeholder="translate('placeholder_city')">
                     <template slot="label">
-                      City
+                      {{ translate('city') }}
                     </template>
                   </input-default>
                 </input-validator>
@@ -156,7 +156,7 @@
           </div>
           <div class="page-inner__content-section">
             <h2 class="page-inner__content-section-title">
-              Personal details
+              {{ translate('personal_details') }}
             </h2>
             <div class="content__form">
               <div class="content__form-group">
@@ -166,11 +166,11 @@
                     { type: 'minLength', rule: 1, message: 'Name has a minimum of 1 characters.' },
                     { type: 'maxLength', rule: 255, message: 'Name has a maximum of 255 characters.' }
                   ]"
-                  message="Your name contains errors"
+                  :message="translate('validation_errors', translate('name'))"
                 >
-                  <input-default name="first_name" placeholder="Enter your first name">
+                  <input-default name="first_name" :placeholder="translate('placeholder_name')">
                     <template slot="label">
-                      First name
+                      {{ translate('name') }}
                     </template>
                   </input-default>
                 </input-validator>
@@ -180,11 +180,11 @@
                     { type: 'minLength', rule: 1, message: 'Surname has a minimum of 1 characters.' },
                     { type: 'maxLength', rule: 255, message: 'Surname has a maximum of 255 characters.' }
                   ]"
-                  message="Your surname contains errors"
+                  :message="translate('validation_errors', translate('surname'))"
                 >
-                  <input-default name="surname" placeholder="Enter your surname">
+                  <input-default name="surname" :placeholder="translate('placeholder_surname')">
                     <template slot="label">
-                      surname
+                      {{ translate('surname') }}
                     </template>
                   </input-default>
                 </input-validator>
