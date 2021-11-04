@@ -67,7 +67,18 @@
 }
 </style>
 <script>
+import email from '~/mixins/validators/email'
+import required from '~/mixins/validators/required'
+import minLength from '~/mixins/validators/minLength'
+import maxLength from '~/mixins/validators/maxLength'
+
 export default {
+  mixins: [
+    email,
+    required,
+    minLength,
+    maxLength
+  ],
   props: {
     message: {
       type: String,
@@ -118,20 +129,6 @@ export default {
       })
 
       this.containsErrors = this.errorMessages.length > 0
-    },
-
-    minLength (value, rule) {
-      return value.length < rule
-    },
-    maxLength (value, rule) {
-      return value.length > rule
-    },
-    required (value) {
-      return value === undefined || value === null || value === ''
-    },
-    email (value) {
-      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      return !re.test(String(value).toLowerCase())
     }
   }
 }
