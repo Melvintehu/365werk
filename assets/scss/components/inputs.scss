@@ -17,13 +17,13 @@
   &__label {
     color: $blue-dark;
     font-weight: 700;
-    font-size: 14px;
+    font-size: $text-sm;
   }
 
   &__default {
     border: 1px solid $blue-gray-darker;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: $text-sm;
     height: 48px;
     max-width: 100%;
     padding-left: 16px;
@@ -31,13 +31,13 @@
 
     &::placeholder {
       color: $gray-dark;
-      font-size: 14px;
+      font-size: $text-sm;
     }
   }
 
   &__help {
     color: $gray-dark;
-    font-size: 14px;
+    font-size: $text-sm;
     margin: 0px;
   }
 }

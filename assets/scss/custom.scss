@@ -83,7 +83,7 @@
     padding-bottom: 32px;
 
     &__sub-title {
-      font-size: 24px;
+      font-size: $text-2xl;
       font-weight: 400;
       line-height: 56px;
     }
@@ -99,7 +99,7 @@
     }
 
     &__title {
-      font-size: 48px;
+      font-size: $text-5xl;
       line-height: 96px;
       position: relative;
       z-index: 10;
@@ -122,7 +122,7 @@
     &__title {
       color: $blue-dark;
       font-weight: 700;
-      font-size: 24px;
+      font-size: $text-2xl;
     }
 
     &__link {
@@ -131,7 +131,7 @@
       justify-content: space-between;
       color: $orange;
       font-weight: 700;
-      font-size: 14px;
+      font-size: $text-sm;
 
       &-label {
         margin-right: 8px;
@@ -196,7 +196,7 @@
       display: inline-flex;
       align-items: center;
       color: white;
-      font-size: 14px;
+      font-size: $text-sm;
       width: 100%;
       padding: 8px 24px;
 
@@ -244,14 +244,14 @@
       }
 
       &__title {
-        font-size: 24px;
+        font-size: $text-2xl;
         padding: 4px 0 8px 0;
         margin: 0;
       }
 
       &__description {
         color: $gray-dark;
-        font-size: 14px;
+        font-size: $text-sm;
         font-weight: 400;
         line-height: 24px;
       }
@@ -270,7 +270,7 @@
 
     &__label-left {
       color: $blue-dark;
-      font-size: 16px;
+      font-size: $text-base;
       font-weight: 700;
       padding: 0;
       margin: 0 0 8px 0;
@@ -278,7 +278,7 @@
 
     &__label-right {
       color: $blue;
-      font-size: 14px;
+      font-size: $text-sm;
       line-height: 24px;
       padding: 0;
       margin: 0 0 16px 0;
@@ -302,7 +302,7 @@
     &__percentage {
       display: none;
       color: $blue-dark;
-      font-size: 14px;
+      font-size: $text-sm;
       font-weight: 700;
       padding: 0;
       margin: 0;
@@ -352,7 +352,7 @@
       &-section {
 
         &-title {
-          font-size: 16px;
+          font-size: $text-base;
           font-weight: 400;
           border-bottom: 1px solid $gray;
           padding-bottom: 16px;
