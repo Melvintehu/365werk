@@ -439,8 +439,37 @@
         }
       }
     }
+  }
+
+  .system-notification {
+    background: white;
+    //border-bottom: 8px solid $orange;
+    border-radius: 4px;
+    font-size: $text-sm;
+    margin: 2rem;
+    padding: 1rem 1.25rem;
+    min-height: 6rem;
+    width: 20rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05), 0 3px 12px rgba(0,0,0,0.05);
 
 
+    &__title {
+      color: $orange;
+      font-weight: 700;
+      padding: 0;
+      margin: 0 0 0.5rem;
+    }
+    &__description {
+      color: $gray-dark;
+      font-size: $text-sm;
+      line-height: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
   }
 
 }
