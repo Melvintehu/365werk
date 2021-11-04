@@ -457,13 +457,12 @@
 
   .system-notification {
     background: white;
-    //border-bottom: 8px solid $orange;
     border-radius: 4px;
     font-size: $text-sm;
     margin: 2rem;
-    padding: 1rem 1.25rem;
+    padding: 1.5rem;
     min-height: 6rem;
-    width: 20rem;
+    width: 24rem;
     position: fixed;
     right: 0;
     top: 0;
@@ -471,6 +470,16 @@
     box-shadow: 0 3px 12px rgba(0,0,0,0.05), 0 3px 12px rgba(0,0,0,0.05);
     cursor: pointer;
 
+    &__icon {
+      margin: 1rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      svg {
+        fill: $orange;
+      }
+    }
 
     &__title {
       color: $orange;
@@ -478,6 +487,7 @@
       padding: 0;
       margin: 0 0 0.5rem;
     }
+
     &__description {
       color: $gray-dark;
       font-size: $text-sm;
