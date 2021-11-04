@@ -1,11 +1,48 @@
 <template>
-  <div class="system-notification">
-    <p class="system-notification__title" >Something went wrong...</p>
-    <p class="system-notification__description" >
-      Whoops we're afraid that feature doesn't exist yet.
-    </p>
-  </div>
+  <transition name="slide-fade-down">
+    <div v-if="notification !== null" class="system-notification" @click="instantDismiss" @mouseenter="cancelDismiss" @mouseleave="dismiss()">
+      <p class="system-notification__title" >
+        {{ notification.title }}
+      </p>
+      <p class="system-notification__description" >
+        {{ notification.description }}
+      </p>
+    </div>
+  </transition>
 </template>
 <script>
-export default {}
+import { mapGetters } from 'vuex'
+
+export default {
+  data () {
+    return {
+      dismissTimeout: null
+    }
+  },
+  computed: {
+    ...mapGetters({
+      notification: 'systemNotifications/getNotification'
+    })
+  },
+  watch: {
+    notification () {
+      if (this.notification !== null) {
+        this.dismiss()
+      }
+    }
+  },
+  methods: {
+    dismiss () {
+      this.dismissTimeout = setTimeout(() => {
+        this.$store.commit('systemNotifications/addNotification', null)
+      }, 3000)
+    },
+    cancelDismiss () {
+      clearTimeout(this.dismissTimeout)
+    },
+    instantDismiss () {
+      this.$store.commit('systemNotifications/addNotification', null)
+    }
+  }
+}
 </script>

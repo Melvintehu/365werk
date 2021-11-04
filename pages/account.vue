@@ -21,7 +21,7 @@
               d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"
             /></svg>
           </account-page-nav-item>
-          <account-page-nav-item to="#">
+          <account-page-nav-item  to="#">
             {{ translate('preferences') }}
           </account-page-nav-item>
           <account-page-nav-item to="#">
