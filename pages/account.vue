@@ -51,7 +51,7 @@
                   ]"
                   :message="translate('validation_errors', translate('email_address'))"
                 >
-                  <input-default name="email" :placeholder="translate('placeholder_email')">
+                  <input-default v-model="email_address" name="email" :placeholder="translate('placeholder_email')">
                     <template slot="label">
                       {{ translate('email_address') }}
                     </template>
@@ -64,7 +64,7 @@
                   ]"
                   :message="translate('validation_errors', translate('phone_number'))"
                 >
-                  <input-default name="phone" :placeholder="translate('placeholder_phone_number')">
+                  <input-default v-model="phone_number" name="phone" :placeholder="translate('placeholder_phone_number')">
                     <template slot="label">
                       {{ translate('phone_number') }}
                     </template>
@@ -87,7 +87,7 @@
                     ]"
                     :message="translate('validation_errors', translate('postal_code'))"
                   >
-                    <input-default name="postal_code" placeholder="1234 AB">
+                    <input-default v-model="postal_code" name="postal_code" placeholder="1234 AB">
                       <template slot="label">
                         {{ translate('postal_code') }}
                       </template>
@@ -102,7 +102,7 @@
                     ]"
                     :message="translate('validation_errors', translate('house_number'))"
                   >
-                    <input-default name="house_number" placeholder="123">
+                    <input-default v-model="house_number" name="house_number" placeholder="123">
                       <template slot="label">
                         {{ translate('house_number') }}
                       </template>
@@ -114,7 +114,7 @@
                     ]"
                     :message="translate('validation_errors', translate('house_number_add_on'))"
                   >
-                    <input-default name="add_on" placeholder="A">
+                    <input-default v-model="add_on" name="add_on" placeholder="A">
                       <template slot="label">
                         {{ translate('add_on') }}
                       </template>
@@ -131,7 +131,7 @@
                   ]"
                   :message="translate('validation_errors', translate('street'))"
                 >
-                  <input-default name="street" :placeholder="translate('placeholder_street')">
+                  <input-default v-model="street" name="street" :placeholder="translate('placeholder_street')">
                     <template slot="label">
                       {{ translate('street') }}
                     </template>
@@ -145,7 +145,7 @@
                   ]"
                   :message="translate('validation_errors', translate('city'))"
                 >
-                  <input-default name="street" :placeholder="translate('placeholder_city')">
+                  <input-default v-model="city" name="city" :placeholder="translate('placeholder_city')">
                     <template slot="label">
                       {{ translate('city') }}
                     </template>
@@ -168,7 +168,7 @@
                   ]"
                   :message="translate('validation_errors', translate('name'))"
                 >
-                  <input-default name="first_name" :placeholder="translate('placeholder_name')">
+                  <input-default v-model="name" name="name" :placeholder="translate('placeholder_name')">
                     <template slot="label">
                       {{ translate('name') }}
                     </template>
@@ -182,12 +182,20 @@
                   ]"
                   :message="translate('validation_errors', translate('surname'))"
                 >
-                  <input-default name="surname" :placeholder="translate('placeholder_surname')">
+                  <input-default v-model="surname" name="surname" :placeholder="translate('placeholder_surname')">
                     <template slot="label">
                       {{ translate('surname') }}
                     </template>
                   </input-default>
                 </input-validator>
+              </div>
+            </div>
+            <!-- actions bar-->
+            <div class="actions-bar">
+              <div class="content__form-button-wrapper">
+                <button class="button__form" @click="save">
+                  Save
+                </button>
               </div>
             </div>
           </div>
@@ -197,6 +205,7 @@
   </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import InputDefault from '../components/form/InputDefault'
 import TheSideNav from '../components/account/TheSideNav'
 import TopBar from '../components/account/TopBar'
@@ -214,6 +223,50 @@ export default {
     InputDefault
   },
   layout: 'account',
-  middleware: 'auth'
+  middleware: 'auth',
+  data () {
+    return {
+      email_address: null,
+      phone_number: null,
+      postal_code: null,
+      house_number: null,
+      add_on: null,
+      street: null,
+      city: null,
+      name: null,
+      surname: null
+    }
+  },
+  computed: {
+    ...mapGetters({
+      user: 'auth/getUser'
+    })
+  },
+  mounted () {
+    this.email_address = this.user.email_address
+    this.phone_number = this.user.phone_number
+    this.postal_code = this.user.postal_code
+    this.house_number = this.user.house_number
+    this.add_on = this.user.add_on
+    this.street = this.user.street
+    this.city = this.user.city
+    this.name = this.user.name
+    this.surname = this.user.surname
+  },
+  methods: {
+    save () {
+      this.$store.dispatch('auth/updateUser', {
+        email_address: this.email_address,
+        phone_number: this.phone_number,
+        postal_code: this.postal_code,
+        house_number: this.house_number,
+        add_on: this.add_on,
+        street: this.street,
+        city: this.city,
+        name: this.name,
+        surname: this.surname
+      })
+    }
+  }
 }
 </script>

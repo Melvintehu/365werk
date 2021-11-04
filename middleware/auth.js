@@ -3,4 +3,5 @@ export default function ({ store, redirect }) {
   if (!isAuthenticated) {
     redirect('/login')
   }
+  store.commit('auth/setUser', JSON.parse(localStorage.getItem('user')))
 }

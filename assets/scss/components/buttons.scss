@@ -12,3 +12,19 @@
     background: darken($orange, 5)
   }
 }
+
+.button__form {
+  background: $orange;
+  color: white;
+  text-align: center;
+  font-size: $text-sm;
+  font-weight: 400;
+  border: transparent;
+  border-radius: 4px;
+  padding: 0.5rem 2rem;
+  height: 3rem;
+
+  &--hover:hover {
+    background: darken($orange, 5)
+  }
+}

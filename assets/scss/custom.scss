@@ -231,7 +231,7 @@
       border-radius: 999px;
       width: 3rem;
       height: 3rem;
-      margin: 1rem;
+      margin: 1rem 2rem;
       position: fixed;
       right: 0;
       bottom: 0;
@@ -335,7 +335,7 @@
     &__label-right {
       color: $blue;
       font-size: $text-sm;
-      line-height: 1rem;
+      line-height: 1.5rem;
       padding: 0;
       margin: 0 0 1rem 0;
     }
@@ -440,6 +440,19 @@
         }
       }
     }
+  }
+
+  .actions-bar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background: white;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05), 0 3px 12px rgba(0,0,0,0.05);
+    position: fixed;
+    bottom: 0;
+    right: 0;
   }
 
   .system-notification {

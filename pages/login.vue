@@ -54,7 +54,7 @@ export default {
   methods: {
     login () {
       this.$store.dispatch('auth/login').then(() => {
-        this.$router.push('account')
+        this.$router.push('/account')
       })
     }
   }

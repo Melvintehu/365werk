@@ -27,7 +27,7 @@
   .side-nav {
     display: block !important;
     box-shadow: none;
-    
+
     &__floating-action-toggle {
       display: none;
     }
@@ -50,6 +50,11 @@
       }
     }
   }
+
+  .actions-bar {
+    justify-content: end;
+  }
+
 
 }
 

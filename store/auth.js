@@ -11,11 +11,7 @@ export const mutations = {
 export const actions = {
   login ({ commit }) {
     return new Promise((resolve, reject) => {
-      const user = {
-        email: 'melvin.tehu@gmail.com',
-        first_name: 'Melvin',
-        last_name: 'Tehubijuluw'
-      }
+      const user = { email_address: 'melvin.tehu@gmail.com' }
       localStorage.setItem('user', JSON.stringify(user))
       commit('setUser', user)
       setTimeout(() => {
@@ -27,6 +23,15 @@ export const actions = {
     return new Promise((resolve, reject) => {
       localStorage.removeItem('user')
       commit('setUser', null)
+      setTimeout(() => {
+        resolve()
+      }, 1000)
+    })
+  },
+  updateUser ({ commit }, userData) {
+    return new Promise((resolve, reject) => {
+      localStorage.setItem('user', JSON.stringify(userData))
+      commit('setUser', userData)
       setTimeout(() => {
         resolve()
       }, 1000)
