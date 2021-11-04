@@ -326,11 +326,7 @@
         margin-bottom: 24px;
         width: 100%;
 
-        &--active &-link {
-          font-weight: 700;
-        }
-
-        &--active &-icon {
+        .nuxt-link-active &-icon {
           display: inline-flex;
         }
 

@@ -8,38 +8,28 @@
       <div class="page-inner">
         <!--Page nav-->
         <div class="page-inner__nav">
-          <account-page-nav-item></account-page-nav-item>
-          <div class="page-inner__nav-item page-inner__nav-item--active">
-            <NuxtLink class="page-inner__nav-item-link" to="/account">
-              Personal details
-            </NuxtLink>
-            <span class="page-inner__nav-item-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24px"
-                viewBox="0 0 24 24"
-                width="24px"
-                fill="#000000"
-              ><rect fill="none" height="24" width="24" /><path
-                d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"
-              /></svg>
-            </span>
-          </div>
-          <div class="page-inner__nav-item">
-            <NuxtLink class="page-inner__nav-item-link" to="/account">
-              Preferences
-            </NuxtLink>
-          </div>
-          <div class="page-inner__nav-item">
-            <NuxtLink class="page-inner__nav-item-link" to="/account">
-              Work experience
-            </NuxtLink>
-          </div>
-          <div class="page-inner__nav-item">
-            <NuxtLink class="page-inner__nav-item-link" to="/account">
-              Educations
-            </NuxtLink>
-          </div>
+          <account-page-nav-item to="/account">
+            Personal details
+            <svg
+              slot="icon"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="#000000"
+            ><rect fill="none" height="24" width="24" /><path
+              d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"
+            /></svg>
+          </account-page-nav-item>
+          <account-page-nav-item to="#">
+            Preferences
+          </account-page-nav-item>
+          <account-page-nav-item to="#">
+            Work experience
+          </account-page-nav-item>
+          <account-page-nav-item to="#">
+            Educations
+          </account-page-nav-item>
         </div>
         <!-- Page content-->
         <page-content>
@@ -145,9 +135,11 @@ import SideNav from '../components/account/SideNav'
 import TopBar from '../components/account/TopBar'
 import PageContent from '../components/account/PageContent'
 import InputValidator from '../components/form/InputValidator'
+import AccountPageNavItem from '../components/account/AccountPageNavItem'
 
 export default {
   components: {
+    AccountPageNavItem,
     InputValidator,
     PageContent,
     TopBar,
