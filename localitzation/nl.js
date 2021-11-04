@@ -38,6 +38,8 @@ export default {
   placeholder_email: 'Voer je e-mailadres in',
   address: 'Adres',
   account_sub_title: 'We hebben je gegevens hier opgeslagen.',
+  account_progress: 'Account progressie',
+  account_progress_sub_title: 'Maak je account compleet voor beter baankansen.',
   // Language
   dutch: 'Nederlands',
   english: 'English',
