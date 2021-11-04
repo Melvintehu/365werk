@@ -3,7 +3,7 @@
 .input {
   display: flex;
   flex-direction: column;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
   width: 100%;
   min-width: 0;
 
@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: end;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
   }
 
   &__label {
@@ -24,9 +24,9 @@
     border: 1px solid $blue-gray-darker;
     border-radius: 4px;
     font-size: $text-sm;
-    height: 48px;
+    height: 3rem;
     max-width: 100%;
-    padding-left: 16px;
+    padding-left: 1rem;
     background: $gray;
 
     &::placeholder {
@@ -38,7 +38,7 @@
   &__help {
     color: $gray-dark;
     font-size: $text-sm;
-    margin: 0px;
+    margin: 0;
   }
 }
 

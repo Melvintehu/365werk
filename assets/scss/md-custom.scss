@@ -1,21 +1,21 @@
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .nav {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 
     &-link__blob {
 
       &-link {
         width: auto;
-        padding-left: 4px;
-        padding-right: 16px;
-        margin-left: 64px;
+        padding-left: 0.25rem;
+        padding-right: 1rem;
+        margin-left: 4rem;
       }
 
       &-img {
@@ -26,8 +26,8 @@
       }
 
       &-icon svg {
-        margin-right: 16px;
-        margin-left: 8px;
+        margin-right: 1rem;
+        margin-left: 0.5rem;
       }
 
       &-label {
@@ -38,21 +38,21 @@
   }
   .page-header {
     width: 80%;
-    padding-bottom: 64px;
+    padding-bottom: 4rem;
   }
   .auth-box {
     width: 70%;
-    padding: 32px 48px 48px 48px;
+    padding: 2rem 3rem 3rem 3rem;
     -webkit-box-shadow: 5px 5px 44px -7px rgba(0, 0, 0, 1);
     -moz-box-shadow: 5px 5px 44px -7px rgba(0, 0, 0, 1);
     box-shadow: 5px 5px 44px -7px rgba(0, 0, 0, 1);
 
     &__header {
-      margin-bottom: 72px;
+      margin-bottom: 4.5rem;
     }
 
     &__button {
-      margin-top: 72px;
+      margin-top: 4.5rem;
     }
   }
 
@@ -60,13 +60,13 @@
     &-top-bar {
       &__go-back {
         display: inline-flex;
-        margin-right: 16px;
+        margin-right: 1rem;
       }
     }
   }
 
   .account-progress {
-    padding-left: 40px;
+    padding-left: 2.5rem;
     position: relative;
 
     &__percentage {
@@ -78,19 +78,19 @@
     flex-direction: row;
 
     &__nav {
-      padding: 56px 32px;
-      width: 256px;
+      padding: 3.5rem 2rem;
+      width: 16rem;
 
       &-item {
-        margin-bottom: 24px;
+        margin-bottom: 1.5rem;
       }
     }
 
     &__content {
-      padding: 32px 32px;
+      padding: 2rem;
 
       &-wrapper {
-        padding: 40px 48px;
+        padding: 2.5rem 3rem;
       }
     }
   }
