@@ -71,13 +71,15 @@ import email from '~/mixins/validators/email'
 import required from '~/mixins/validators/required'
 import minLength from '~/mixins/validators/minLength'
 import maxLength from '~/mixins/validators/maxLength'
+import phoneNumber from '~/mixins/validators/phoneNumber'
 
 export default {
   mixins: [
     email,
     required,
     minLength,
-    maxLength
+    maxLength,
+    phoneNumber
   ],
   props: {
     message: {
@@ -101,7 +103,8 @@ export default {
         minLength: this.minLength,
         maxLength: this.maxLength,
         required: this.required,
-        email: this.email
+        email: this.email,
+        phoneNumber: this.phoneNumber
       },
       errorMessages: []
     }

@@ -57,11 +57,18 @@
                     </template>
                   </input-default>
                 </input-validator>
-                <input-default name="email" placeholder="Enter your email address">
-                  <template slot="label">
-                    Phone number
-                  </template>
-                </input-default>
+                <input-validator
+                  :rules="[
+                    { type: 'phoneNumber', message: 'Your phone number is invalid. (+31612345678)' }
+                  ]"
+                  message="Your email contains errors"
+                >
+                  <input-default name="phone" placeholder="Enter your phone number">
+                    <template slot="label">
+                      Phone number
+                    </template>
+                  </input-default>
+                </input-validator>
               </div>
             </div>
           </div>
