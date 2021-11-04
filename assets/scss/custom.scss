@@ -160,6 +160,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    position: relative;
 
     &__flag {
      width: 1.5rem;
@@ -167,6 +168,36 @@
 
     &__icon svg{
       fill: white;
+    }
+
+    &__dropdown {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border: 1px solid white;
+      border-radius: 4px;
+      width: 100%;
+      position: absolute;
+      bottom: -5rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+    }
+
+    &__country {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 0.5rem;
+      &-flag img{
+        width: 1.5rem;
+        margin-right: 0.5rem;
+      }
+
+      &-label {
+        color: $blue-dark;
+        font-size: $text-sm;
+        margin: 0;
+      }
     }
   }
 
