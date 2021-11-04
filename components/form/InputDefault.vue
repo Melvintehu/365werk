@@ -8,7 +8,14 @@
         <slot name="help" />
       </a>
     </div>
-    <input :name="name" :type="type" :placeholder="placeholder" class="input__default">
+    <input
+      :value="value"
+      :name="name"
+      :type="type"
+      :placeholder="placeholder"
+      class="input__default"
+      @input="updateValue"
+    >
   </div>
 </template>
 <script>
@@ -32,6 +39,15 @@ export default {
     to: {
       type: String,
       default: '#'
+    },
+    value: {
+      type: String,
+      default: ''
+    }
+  },
+  methods: {
+    updateValue (e) {
+      this.$emit('input', e.target.value)
     }
   }
 }
