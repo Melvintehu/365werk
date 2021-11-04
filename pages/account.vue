@@ -267,6 +267,7 @@ export default {
         surname: this.surname
       }).then(() => {
         this.notify('Yes! Success!', 'You have successfully updated your profile!')
+        window.scrollTo(0, 0)
       })
     }
   }
