@@ -61,7 +61,7 @@
                   :rules="[
                     { type: 'phoneNumber', message: 'Your phone number is invalid. (+31612345678)' }
                   ]"
-                  message="Your email contains errors"
+                  message="Your phone number contains errors"
                 >
                   <input-default name="phone" placeholder="Enter your phone number">
                     <template slot="label">
@@ -79,11 +79,18 @@
             <div class="content__form">
               <div class="content__form-address">
                 <div class="content__form-group">
-                  <input-default name="email" placeholder="1234AB">
-                    <template slot="label">
-                      Postal code
-                    </template>
-                  </input-default>
+                  <input-validator
+                    :rules="[
+                    { type: 'postalCode', message: 'Your postal code is invalid. (1234 AB)' }
+                  ]"
+                    message="Your phone number contains errors"
+                  >
+                    <input-default name="postal_code" placeholder="1234 AB">
+                      <template slot="label">
+                        Postal code
+                      </template>
+                    </input-default>
+                  </input-validator>
                 </div>
                 <div class="content__form-address-house-details">
                   <input-default name="email" placeholder="123">
