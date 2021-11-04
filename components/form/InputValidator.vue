@@ -73,15 +73,17 @@ import minLength from '~/mixins/validators/minLength'
 import maxLength from '~/mixins/validators/maxLength'
 import phoneNumber from '~/mixins/validators/phoneNumber'
 import postalCode from '~/mixins/validators/postalCode'
+import number from '~/mixins/validators/number'
 
 export default {
   mixins: [
     email,
-    required,
+    number,
     minLength,
     maxLength,
     phoneNumber,
-    postalCode
+    postalCode,
+    required
   ],
   props: {
     message: {
@@ -107,7 +109,8 @@ export default {
         required: this.required,
         email: this.email,
         phoneNumber: this.phoneNumber,
-        postalCode: this.postalCode
+        postalCode: this.postalCode,
+        number: this.number
       },
       errorMessages: []
     }
