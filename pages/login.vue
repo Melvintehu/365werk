@@ -4,7 +4,7 @@
       <page-header>
         {{ getTranslation('login_page_title') }}
         <template slot="subTitle">
-          Good to see you back! Quick, login to see what new jobs we have to offer.
+          {{ getTranslation('login_page_sub_title') }}
         </template>
       </page-header>
 
