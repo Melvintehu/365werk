@@ -6,6 +6,9 @@
         365werk
       </NuxtLink>
       <div class="nav__right">
+        <div class="nav__right-language-switch-wrapper">
+          <the-language-switch />
+        </div>
         <NuxtLink class="nav-link__default" to="/register">
           Register
         </NuxtLink>
@@ -26,5 +29,11 @@
 </template>
 
 <script>
-export default {}
+import TheLanguageSwitch from '~/components/TheLanguageSwitch'
+
+export default {
+  components: {
+    TheLanguageSwitch
+  }
+}
 </script>

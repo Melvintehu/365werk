@@ -6,17 +6,21 @@
     </figure>
     <transition name="slide-fade-down">
       <div v-if="expanded" class="language-switch__dropdown">
-        <div class="language-switch__country">
+        <div class="language-switch__country" @click="switchLanguage('nl')">
           <figure class="language-switch__country-flag">
             <img src="~/assets/img/country-flags/svg/nl.svg" alt="">
           </figure>
-          <p class="language-switch__country-label">Netherlands</p>
+          <p class="language-switch__country-label">
+            Netherlands
+          </p>
         </div>
-        <div class="language-switch__country">
+        <div class="language-switch__country" @click="switchLanguage('gb')">
           <figure class="language-switch__country-flag">
             <img src="~/assets/img/country-flags/svg/gb.svg" alt="">
           </figure>
-          <p class="language-switch__country-label">English</p>
+          <p class="language-switch__country-label">
+            English
+          </p>
         </div>
       </div>
     </transition>
@@ -27,6 +31,11 @@ export default {
   data () {
     return {
       expanded: false
+    }
+  },
+  methods: {
+    switchLanguage (language) {
+      this.$store.commit('localization/setLanguage', language)
     }
   }
 }
