@@ -8,5 +8,7 @@ export default {
   forgot_password: 'Forgot password?',
   login_button: 'Yes, log me in',
   enter_password: 'Enter your password',
-  enter_email: 'Enter your email'
+  enter_email: 'Enter your email',
+  register: 'Register',
+  log_in_to_your_account: 'Log in to your account'
 }

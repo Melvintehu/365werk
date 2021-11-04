@@ -8,5 +8,7 @@ export default {
   forgot_password: 'Wachtwoord vergeten?',
   login_button: 'Snel inloggen',
   enter_password: 'Voer je wachtwoord in',
-  enter_email: 'Voer je email in'
+  enter_email: 'Voer je email in',
+  register: 'Registreren',
+  log_in_to_your_account: 'Inloggen op je account'
 }
