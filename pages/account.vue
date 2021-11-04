@@ -44,8 +44,8 @@
               <div class="content__form-group">
                 <input-validator
                   :rules="[
-                    { type: 'email', message: 'Your email is invalid.' },
-                    { type: 'required', message: 'Your email address is required.' },
+                    { type: 'email', message: 'Email is invalid.' },
+                    { type: 'required', message: 'Email address is required.' },
                     { type: 'minLength', rule: 2, message: 'a minimal of 2 character is mandatory.' },
                     { type: 'maxLength', rule: 255, message: 'cannot contain more than 255 characters.' }
                   ]"
@@ -59,8 +59,8 @@
                 </input-validator>
                 <input-validator
                   :rules="[
-                    { type: 'required', message: 'Your phone number is required.' },
-                    { type: 'phoneNumber', message: 'Your phone number is invalid. (+31612345678)' }
+                    { type: 'required', message: 'Phone number is required.' },
+                    { type: 'phoneNumber', message: 'Phone number is invalid. (+31612345678)' }
                   ]"
                   message="Your phone number contains errors"
                 >
@@ -82,10 +82,10 @@
                 <div class="content__form-group">
                   <input-validator
                     :rules="[
-                      { type: 'required', message: 'Your postal code is required.' },
-                      { type: 'postalCode', message: 'Your postal code is invalid. (1234 AB)' }
+                      { type: 'required', message: 'Postal code is required.' },
+                      { type: 'postalCode', message: 'Postal code is invalid. (1234 AB)' }
                     ]"
-                    message="Your postal code contains errors"
+                    message="your postal code contains errors"
                   >
                     <input-default name="postal_code" placeholder="1234 AB">
                       <template slot="label">
@@ -97,10 +97,10 @@
                 <div class="content__form-address-house-details">
                   <input-validator
                     :rules="[
-                      { type: 'required', message: 'Your house number is required.' },
-                      { type: 'number', message: 'Your house number should only contain numbers. (12)' },
+                      { type: 'required', message: 'House number is required.' },
+                      { type: 'number', message: 'House number should only contain numbers. (12)' },
                     ]"
-                    message="Your house number contains errors"
+                    message="your house number contains errors"
                   >
                     <input-default name="house_number" placeholder="123">
                       <template slot="label">
@@ -110,11 +110,11 @@
                   </input-validator>
                   <input-validator
                     :rules="[
-                      { type: 'letter', message: 'Your house number add on should only contain letters. (A)' },
+                      { type: 'letter', message: 'House number add on should only contain letters. (A)' },
                     ]"
-                    message="Your house number add on contains errors"
+                    message="House number add on contains errors"
                   >
-                    <input-default name="email" placeholder="A">
+                    <input-default name="add_on" placeholder="A">
                       <template slot="label">
                         Add on
                       </template>
@@ -123,16 +123,34 @@
                 </div>
               </div>
               <div class="content__form-group">
-                <input-default name="email" placeholder="Enter your street">
-                  <template slot="label">
-                    Street
-                  </template>
-                </input-default>
-                <input-default name="email" placeholder="Enter your city">
-                  <template slot="label">
-                    City
-                  </template>
-                </input-default>
+                <input-validator
+                  :rules="[
+                    { type: 'required', message: 'Street is required.' },
+                    { type: 'minLength', rule: 1, message: 'Street has a minimum of 1 characters.' },
+                    { type: 'maxLength', rule: 55, message: 'Street has a maximum of 55 characters.' }
+                  ]"
+                  message="Your street contains errors"
+                >
+                  <input-default name="street" placeholder="Enter your street">
+                    <template slot="label">
+                      Street
+                    </template>
+                  </input-default>
+                </input-validator>
+                <input-validator
+                  :rules="[
+                    { type: 'required', message: 'City is required.' },
+                    { type: 'minLength', rule: 2, message: 'City has a minimum of 2 characters.' },
+                    { type: 'maxLength', rule: 25, message: 'City has a maximum of 25 characters.' }
+                  ]"
+                  message="Street contains errors"
+                >
+                  <input-default name="street" placeholder="Enter your city">
+                    <template slot="label">
+                      City
+                    </template>
+                  </input-default>
+                </input-validator>
               </div>
             </div>
           </div>
@@ -142,16 +160,34 @@
             </h2>
             <div class="content__form">
               <div class="content__form-group">
-                <input-default name="email" placeholder="Enter your email address">
-                  <template slot="label">
-                    First name
-                  </template>
-                </input-default>
-                <input-default name="email" placeholder="Enter your email address">
-                  <template slot="label">
-                    surname
-                  </template>
-                </input-default>
+                <input-validator
+                  :rules="[
+                    { type: 'required', message: 'Your name is required.' },
+                    { type: 'minLength', rule: 1, message: 'Name has a minimum of 1 characters.' },
+                    { type: 'maxLength', rule: 255, message: 'Name has a maximum of 255 characters.' }
+                  ]"
+                  message="Your name contains errors"
+                >
+                  <input-default name="first_name" placeholder="Enter your first name">
+                    <template slot="label">
+                      First name
+                    </template>
+                  </input-default>
+                </input-validator>
+                <input-validator
+                  :rules="[
+                    { type: 'required', message: 'Your surname is required.' },
+                    { type: 'minLength', rule: 1, message: 'Surname has a minimum of 1 characters.' },
+                    { type: 'maxLength', rule: 255, message: 'Surname has a maximum of 255 characters.' }
+                  ]"
+                  message="Your surname contains errors"
+                >
+                  <input-default name="surname" placeholder="Enter your surname">
+                    <template slot="label">
+                      surname
+                    </template>
+                  </input-default>
+                </input-validator>
               </div>
             </div>
           </div>
