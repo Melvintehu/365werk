@@ -12,10 +12,10 @@
           </span>
       <div>
         <h2 class="page-top-bar__title">
-          Account
+          {{ translate('account') }}
         </h2>
         <p class="page-top-bar__description">
-          We stored your account details here.
+          {{ translate('account_sub_title') }}
         </p>
       </div>
     </div>

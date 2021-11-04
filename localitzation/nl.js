@@ -37,6 +37,7 @@ export default {
   placeholder_phone_number: 'Voer je telefoonnummer in',
   placeholder_email: 'Voer je e-mailadres in',
   address: 'Adres',
+  account_sub_title: 'We hebben je gegevens hier opgeslagen.',
   // Language
   dutch: 'Nederlands',
   english: 'English',
