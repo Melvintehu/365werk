@@ -1,7 +1,11 @@
 export default {
   methods: {
-    getTranslation (key) {
-      return this.$store.getters['localization/getTranslation'](key)
+    translate (key, attribute = null) {
+      const translation = this.$store.getters['localization/getTranslation'](key)
+      if (attribute === null) {
+        return translation
+      }
+      return translation.replace(':attribute', attribute)
     }
   }
 }
