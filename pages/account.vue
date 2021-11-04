@@ -131,7 +131,7 @@
 </template>
 <script>
 import InputDefault from '../components/form/InputDefault'
-import SideNav from '../components/account/SideNav'
+import TheSideNav from '../components/account/TheSideNav'
 import TopBar from '../components/account/TopBar'
 import PageContent from '../components/account/PageContent'
 import InputValidator from '../components/form/InputValidator'
@@ -143,7 +143,7 @@ export default {
     InputValidator,
     PageContent,
     TopBar,
-    SideNav,
+    SideNav: TheSideNav,
     InputDefault
   },
   layout: 'account',

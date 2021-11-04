@@ -5,8 +5,8 @@
   </div>
 </template>
 <script>
-import NavAuth from '../components/NavAuth'
+import TheNavAuth from '../components/TheNavAuth'
 export default {
-  components: { NavAuth }
+  components: { NavAuth: TheNavAuth }
 }
 </script>
