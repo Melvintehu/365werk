@@ -10,29 +10,29 @@
 
       <auth-box links-to="/register">
         <template slot="label">
-          Login
+          {{ getTranslation('login') }}
         </template>
         <template slot="linkLabel">
-          Not an account yet? Register
+          {{ getTranslation('no_account') }}
         </template>
 
-        <input-default name="email" placeholder="Enter your email address">
+        <input-default name="email" :placeholder="getTranslation('enter_email')">
           <template slot="label">
-            Email address
+            {{ getTranslation('email_address') }}
           </template>
         </input-default>
 
-        <input-default to="/forgot-password" name="password" type="password" placeholder="Enter your password">
+        <input-default to="/forgot-password" name="password" type="password" :placeholder="getTranslation('enter_password')">
           <template slot="label">
-            Password
+            {{ getTranslation('password') }}
           </template>
           <template slot="help">
-            Forgot password?
+            {{ getTranslation('forgot_password') }}
           </template>
         </input-default>
 
-        <button @click="login()" slot="button" class="button__main button__main--hover">
-          Yes, log me in
+        <button slot="button" class="button__main button__main--hover" @click="login()">
+          {{ getTranslation('login_button') }}
         </button>
       </auth-box>
     </div>
