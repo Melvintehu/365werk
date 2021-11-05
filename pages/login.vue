@@ -16,13 +16,13 @@
           {{ translate('no_account') }}
         </template>
 
-        <input-default name="email" :placeholder="translate('enter_email')">
+        <input-default v-model="email" name="email" :placeholder="translate('enter_email')">
           <template slot="label">
             {{ translate('email_address') }}
           </template>
         </input-default>
 
-        <input-default to="/forgot-password" name="password" type="password" :placeholder="translate('enter_password')">
+        <input-default v-model="password" to="/forgot-password" name="password" type="password" :placeholder="translate('enter_password')">
           <template slot="label">
             {{ translate('password') }}
           </template>
@@ -51,9 +51,18 @@ export default {
     AuthBox
   },
   layout: 'auth',
+  data () {
+    return {
+      email: 'opdracht@365werk.nl',
+      password: 'opdrachtpass'
+    }
+  },
   methods: {
     login () {
-      this.$store.dispatch('auth/login').then(() => {
+      this.$store.dispatch('auth/login', {
+        email: this.email,
+        password: this.password
+      }).then(() => {
         this.$router.push('/account')
       })
     }

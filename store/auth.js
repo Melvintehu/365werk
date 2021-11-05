@@ -9,7 +9,7 @@ export const mutations = {
 }
 
 export const actions = {
-  login ({ commit }) {
+  login ({ commit }, credentials) {
     return new Promise((resolve, reject) => {
       fetch('https://login-opdracht.365werk.workers.dev/login', {
         method: 'POST',
@@ -17,8 +17,8 @@ export const actions = {
           'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: JSON.stringify({
-          email: 'opdracht@365werk.nl',
-          password: 'opdrachtpass'
+          email: credentials.email,
+          password: credentials.password
         })
       }).then((response) => {
         response.json().then((data) => {

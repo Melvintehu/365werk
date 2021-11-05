@@ -1,7 +1,7 @@
 <template>
   <div v-click-outside="close">
     <transition name="slide-fade">
-      <div  v-show="expanded" class="side-nav">
+      <div v-show="expanded" class="side-nav">
         <!-- Logo -->
         <div class="side-nav__logo">
           <img src="~/assets/img/logos/svg/365werk.svg">
