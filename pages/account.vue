@@ -201,6 +201,7 @@
         </page-content>
       </div>
     </div>
+    <modal />
   </div>
 </template>
 <script>
@@ -210,9 +211,11 @@ import TopBar from '../components/account/TopBar'
 import PageContent from '../components/account/PageContent'
 import InputValidator from '../components/form/InputValidator'
 import AccountPageNavItem from '../components/account/AccountPageNavItem'
+import Modal from '../components/Modal'
 
 export default {
   components: {
+    Modal,
     AccountPageNavItem,
     InputValidator,
     PageContent,
