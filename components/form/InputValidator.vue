@@ -1,7 +1,7 @@
 <template>
-  <div class="input-validator">
+  <div class="input-validator" :class="{ 'on-top': focused }" @focusin="toggleFocus" @focusout="toggleFocus">
     <transition name="slide-fade-down">
-      <div v-if="containsErrors" class="input-validator__message">
+      <div v-if="containsErrors && focused" class="input-validator__message">
         <ul>
           <li>{{ message }}</li>
           <li v-for="error in errorMessages" :key="error">
@@ -17,6 +17,9 @@
   </div>
 </template>
 <style lang="scss">
+.on-top {
+  z-index: 50;
+}
 .input-validator {
   position: relative;
 
@@ -115,7 +118,8 @@ export default {
         number: this.number,
         letter: this.letter
       },
-      errorMessages: []
+      errorMessages: [],
+      focused: false
     }
   },
   mounted () {
@@ -141,6 +145,10 @@ export default {
       })
 
       this.containsErrors = this.errorMessages.length > 0
+    },
+
+    toggleFocus () {
+      this.focused = !this.focused
     }
   }
 }
