@@ -30,7 +30,7 @@ export default {
       this.opened = false
     },
     proceed () {
-      console.log('test')
+      this.$emit('proceed')
     }
   }
 }
