@@ -27,6 +27,8 @@ export const actions = {
           commit('setUser', user)
 
           resolve()
+        }).catch((e) => {
+          reject(e)
         })
       })
     })

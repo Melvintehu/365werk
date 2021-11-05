@@ -64,6 +64,8 @@ export default {
         password: this.password
       }).then(() => {
         this.$router.push('/account')
+      }).catch((e) => {
+        this.notify('Whoops something went wrong', 'Looks like you\'ve provided the wrong credentials.')
       })
     }
   }
