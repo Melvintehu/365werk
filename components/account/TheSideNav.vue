@@ -26,7 +26,7 @@
             {{ translate('reset_password') }}
           </span>
         </NuxtLink>
-        <div @click="logout" class="side-nav__item side-nav__item--hover" >
+        <div class="side-nav__item side-nav__item--hover" @click="logout">
           <span class="side-nav__item-icon">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none" /><path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" /></svg>
           </span>
@@ -42,6 +42,29 @@
     </div>
   </div>
 </template>
+<script>
+import TheLanguageSwitch from '../TheLanguageSwitch'
+export default {
+  components: { TheLanguageSwitch },
+  data () {
+    return {
+      expanded: false
+    }
+  },
+  methods: {
+    logout () {
+      this.confirm('Eh, are you sure?', 'Are you sure you wanna log out? Your demo data will be lost.').then(() => {
+        this.$store.dispatch('auth/logout').then(() => {
+          this.$router.push('/login')
+        })
+      })
+    },
+    close () {
+      this.expanded = false
+    }
+  }
+}
+</script>
 <style>
   .slide-fade-enter-active {
     transition: all .3s ease;
@@ -55,24 +78,3 @@
     opacity: 0;
   }
 </style>
-<script>
-import TheLanguageSwitch from '../TheLanguageSwitch'
-export default {
-  components: { TheLanguageSwitch },
-  data () {
-    return {
-      expanded: false
-    }
-  },
-  methods: {
-    logout () {
-      this.$store.dispatch('auth/logout').then(() => {
-        this.$router.push('/login')
-      })
-    },
-    close () {
-      this.expanded = false
-    }
-  }
-}
-</script>
