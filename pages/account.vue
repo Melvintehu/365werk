@@ -1,7 +1,6 @@
 <template>
   <div class="page-wrapper">
     <side-nav />
-
     <div class="page">
       <!--Page top bar-->
       <top-bar />
@@ -51,7 +50,7 @@
                   ]"
                   :message="translate('validation_errors', translate('email_address'))"
                 >
-                  <input-default v-model="email" name="email" :placeholder="translate('placeholder_email')">
+                  <input-default v-model="user.email" name="email" :placeholder="translate('placeholder_email')">
                     <template slot="label">
                       {{ translate('email_address') }}
                     </template>
@@ -64,7 +63,7 @@
                   ]"
                   :message="translate('validation_errors', translate('phone_number'))"
                 >
-                  <input-default v-model="phone" name="phone" :placeholder="translate('placeholder_phone_number')">
+                  <input-default v-model="user.phone" name="phone" :placeholder="translate('placeholder_phone_number')">
                     <template slot="label">
                       {{ translate('phone_number') }}
                     </template>
@@ -87,7 +86,7 @@
                     ]"
                     :message="translate('validation_errors', translate('postal_code'))"
                   >
-                    <input-default v-model="postal_code" name="postal_code" placeholder="1234 AB">
+                    <input-default v-model="user.postal_code" name="postal_code" placeholder="1234 AB">
                       <template slot="label">
                         {{ translate('postal_code') }}
                       </template>
@@ -102,7 +101,7 @@
                     ]"
                     :message="translate('validation_errors', translate('house_number'))"
                   >
-                    <input-default v-model="house_number" name="house_number" placeholder="123">
+                    <input-default v-model="user.house_number" name="house_number" placeholder="123">
                       <template slot="label">
                         {{ translate('house_number') }}
                       </template>
@@ -114,7 +113,7 @@
                     ]"
                     :message="translate('validation_errors', translate('house_number_add_on'))"
                   >
-                    <input-default v-model="add_on" name="add_on" placeholder="A">
+                    <input-default v-model="user.add_on" name="add_on" placeholder="A">
                       <template slot="label">
                         {{ translate('add_on') }}
                       </template>
@@ -131,7 +130,7 @@
                   ]"
                   :message="translate('validation_errors', translate('street'))"
                 >
-                  <input-default v-model="street" name="street" :placeholder="translate('placeholder_street')">
+                  <input-default v-model="user.street" name="street" :placeholder="translate('placeholder_street')">
                     <template slot="label">
                       {{ translate('street') }}
                     </template>
@@ -145,7 +144,7 @@
                   ]"
                   :message="translate('validation_errors', translate('city'))"
                 >
-                  <input-default v-model="city" name="city" :placeholder="translate('placeholder_city')">
+                  <input-default v-model="user.city" name="city" :placeholder="translate('placeholder_city')">
                     <template slot="label">
                       {{ translate('city') }}
                     </template>
@@ -168,7 +167,7 @@
                   ]"
                   :message="translate('validation_errors', translate('name'))"
                 >
-                  <input-default v-model="name" name="name" :placeholder="translate('placeholder_name')">
+                  <input-default v-model="user.name" name="name" :placeholder="translate('placeholder_name')">
                     <template slot="label">
                       {{ translate('name') }}
                     </template>
@@ -182,7 +181,7 @@
                   ]"
                   :message="translate('validation_errors', translate('surname'))"
                 >
-                  <input-default v-model="surname" name="surname" :placeholder="translate('placeholder_surname')">
+                  <input-default v-model="user.surname" name="surname" :placeholder="translate('placeholder_surname')">
                     <template slot="label">
                       {{ translate('surname') }}
                     </template>
@@ -205,7 +204,6 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
 import InputDefault from '../components/form/InputDefault'
 import TheSideNav from '../components/account/TheSideNav'
 import TopBar from '../components/account/TopBar'
@@ -224,48 +222,14 @@ export default {
   },
   layout: 'account',
   middleware: 'auth',
-  data () {
-    return {
-      email: null,
-      phone: null,
-      postal_code: null,
-      house_number: null,
-      add_on: null,
-      street: null,
-      city: null,
-      name: null,
-      surname: null
-    }
-  },
   computed: {
-    ...mapGetters({
-      user: 'auth/getUser'
-    })
-  },
-  mounted () {
-    this.email = this.user.email
-    this.phone = this.user.phone
-    this.postal_code = this.user.postal_code
-    this.house_number = this.user.house_number
-    this.add_on = this.user.add_on
-    this.street = this.user.street
-    this.city = this.user.city
-    this.name = this.user.name
-    this.surname = this.user.surname
+    user () {
+      return { ...this.$store.state.auth.user }
+    }
   },
   methods: {
     save () {
-      this.$store.dispatch('auth/updateUser', {
-        email: this.email,
-        phone: this.phone,
-        postal_code: this.postal_code,
-        house_number: this.house_number,
-        add_on: this.add_on,
-        street: this.street,
-        city: this.city,
-        name: this.name,
-        surname: this.surname
-      }).then(() => {
+      this.$store.dispatch('auth/updateUser', this.user).then(() => {
         this.notify('Yes! Success!', 'You have successfully updated your profile!')
         window.scrollTo(0, 0)
       })

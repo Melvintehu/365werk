@@ -1,5 +1,5 @@
 export const state = () => ({
-  user: null
+  user: {}
 })
 
 export const mutations = {
@@ -37,18 +37,14 @@ export const actions = {
     return new Promise((resolve, reject) => {
       localStorage.removeItem('user')
       commit('setUser', null)
-      setTimeout(() => {
-        resolve()
-      }, 1000)
+      resolve()
     })
   },
   updateUser ({ commit }, userData) {
     return new Promise((resolve, reject) => {
       localStorage.setItem('user', JSON.stringify(userData))
       commit('setUser', userData)
-      setTimeout(() => {
-        resolve()
-      }, 1000)
+      resolve()
     })
   }
 }
