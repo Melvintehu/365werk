@@ -11,12 +11,24 @@ export const mutations = {
 export const actions = {
   login ({ commit }) {
     return new Promise((resolve, reject) => {
-      const user = { email_address: 'melvin.tehu@gmail.com' }
-      localStorage.setItem('user', JSON.stringify(user))
-      commit('setUser', user)
-      setTimeout(() => {
-        resolve()
-      }, 1000)
+      fetch('https://login-opdracht.365werk.workers.dev/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: JSON.stringify({
+          email: 'opdracht@365werk.nl',
+          password: 'opdrachtpass'
+        })
+      }).then((response) => {
+        response.json().then((data) => {
+          const user = { email: data.email, name: data.name, phone: data.phone }
+          localStorage.setItem('user', JSON.stringify(user))
+          commit('setUser', user)
+
+          resolve()
+        })
+      })
     })
   },
   logout ({ commit }) {
