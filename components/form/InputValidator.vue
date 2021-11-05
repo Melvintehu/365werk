@@ -95,10 +95,12 @@ export default {
       type: String,
       required: true
     },
-
     rules: {
       type: Array,
       required: true
+    },
+    syncWith: {
+      type: String
     }
   },
   data () {
@@ -145,6 +147,11 @@ export default {
       })
 
       this.containsErrors = this.errorMessages.length > 0
+      if (this.containsErrors) {
+        this.$nuxt.$emit(`disable-on-errors:${this.syncWith}:register`, this.input.name)
+      } else {
+        this.$nuxt.$emit(`disable-on-errors:${this.syncWith}:remove`, this.input.name)
+      }
     },
 
     toggleFocus () {

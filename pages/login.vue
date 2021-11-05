@@ -16,6 +16,7 @@
           {{ translate('no_account') }}
         </template>
         <input-validator
+          sync-with="login"
           :rules="[
             { type: 'required', message: translate('required', translate('email_address')) },
             { type: 'email', message: translate('invalid', translate('email_address')) },
@@ -31,6 +32,7 @@
           </input-default>
         </input-validator>
         <input-validator
+          sync-with="login"
           :rules="[
             { type: 'required', message: translate('required', translate('password')) },
             { type: 'minLength', rule: 12, message: translate('min_length', 12) },
@@ -46,9 +48,11 @@
             </template>
           </input-default>
         </input-validator>
-        <button slot="button" class="button__main button__main--hover" @click="login()">
-          {{ translate('login_button') }}
-        </button>
+        <disable-on-error slot="button" sync-with="login">
+          <button  class="button__main button__main--hover" @click="login()">
+            {{ translate('login_button') }}
+          </button>
+        </disable-on-error>
       </auth-box>
     </div>
   </div>
@@ -59,9 +63,11 @@ import AuthBox from '../components/auth/AuthBox'
 import PageHeader from '../components/auth/PageHeader'
 import InputDefault from '../components/form/InputDefault'
 import InputValidator from '../components/form/InputValidator'
+import DisableOnError from '../components/form/DisableOnError'
 
 export default {
   components: {
+    DisableOnError,
     InputValidator,
     InputDefault,
     PageHeader,
