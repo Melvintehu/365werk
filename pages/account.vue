@@ -51,7 +51,7 @@
                   ]"
                   :message="translate('validation_errors', translate('email_address'))"
                 >
-                  <input-default v-model="email_address" name="email" :placeholder="translate('placeholder_email')">
+                  <input-default v-model="email" name="email" :placeholder="translate('placeholder_email')">
                     <template slot="label">
                       {{ translate('email_address') }}
                     </template>
@@ -64,7 +64,7 @@
                   ]"
                   :message="translate('validation_errors', translate('phone_number'))"
                 >
-                  <input-default v-model="phone_number" name="phone" :placeholder="translate('placeholder_phone_number')">
+                  <input-default v-model="phone" name="phone" :placeholder="translate('placeholder_phone_number')">
                     <template slot="label">
                       {{ translate('phone_number') }}
                     </template>
@@ -226,8 +226,8 @@ export default {
   middleware: 'auth',
   data () {
     return {
-      email_address: null,
-      phone_number: null,
+      email: null,
+      phone: null,
       postal_code: null,
       house_number: null,
       add_on: null,
@@ -243,8 +243,8 @@ export default {
     })
   },
   mounted () {
-    this.email_address = this.user.email_address
-    this.phone_number = this.user.phone_number
+    this.email = this.user.email
+    this.phone = this.user.phone
     this.postal_code = this.user.postal_code
     this.house_number = this.user.house_number
     this.add_on = this.user.add_on
@@ -256,8 +256,8 @@ export default {
   methods: {
     save () {
       this.$store.dispatch('auth/updateUser', {
-        email_address: this.email_address,
-        phone_number: this.phone_number,
+        email: this.email,
+        phone: this.phone,
         postal_code: this.postal_code,
         house_number: this.house_number,
         add_on: this.add_on,
