@@ -3,44 +3,44 @@
     <div class="container">
       <!-- Page title, subtitle -->
       <page-header>
-        Let's create an account
+        {{ translate('register_page_title') }}
         <template slot="subTitle">
-          You're just a few keystrokes away from finding your dream job.
+          {{ translate('register_page_sub_title') }}
         </template>
       </page-header>
 
       <auth-box links-to="/login">
         <template slot="label">
-          Login
+          {{ translate('register') }}
         </template>
         <template slot="linkLabel">
-          Already an account? Login
+          {{ translate('already_an_account') }}
         </template>
 
-        <input-default name="email" placeholder="Enter your email address">
+        <input-default name="email" :placeholder="translate('placeholder_email')">
           <template slot="label">
-            Email address
+            {{ translate('email_address') }}
           </template>
         </input-default>
 
-        <input-default name="phone" placeholder="Enter your phone number">
+        <input-default name="phone" :placeholder="translate('placeholder_phone_number')">
           <template slot="label">
-            Phone number
+            {{ translate('phone_number') }}
           </template>
         </input-default>
 
-        <input-default to="/forgot-password" name="password" type="password" placeholder="Enter your password">
+        <input-default target="_blank" to="https://www.lastpass.com/nl/features/password-generator" name="password" type="password" :placeholder="translate('enter_password')">
           <template slot="label">
-            Password
+            {{ translate('password') }}
           </template>
           <template slot="help">
-            Let us generate a password
+            {{ translate('generate_password') }}
           </template>
         </input-default>
 
         <!--Login button-->
         <button slot="button" class="button__main button__main--hover">
-          Yes, log me in
+          {{ translate('register_button') }}
         </button>
       </auth-box>
     </div>

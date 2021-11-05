@@ -1,4 +1,5 @@
 export default {
+  // Login page
   login_page_title: 'Welkom terug!',
   login_page_sub_title: 'Goed dat je er weer bent! Log snel in om het nieuwste banenaanbod te bekijken.',
   login: 'Inloggen',
@@ -11,6 +12,12 @@ export default {
   enter_email: 'Voer je email in',
   register: 'Registreren',
   log_in_to_your_account: 'Inloggen op je account',
+  // Register page
+  register_page_title: 'Maak een account aan',
+  register_page_sub_title: 'Ga gauw door, een account is zo gemaakt!',
+  already_an_account: 'Al een account? Inloggen',
+  register_button: 'Ja, account aanmaken',
+  generate_password: 'Wachtwoord nodig? Genereer hier één.',
   // account
   account: 'Account',
   reset_password: 'Wijzig wachtwoord',

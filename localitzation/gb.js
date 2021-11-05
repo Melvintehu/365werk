@@ -1,4 +1,5 @@
 export default {
+  // Login page
   login_page_title: 'Welcome back!',
   login_page_sub_title: 'Good to see you back! Quick, login to see what new jobs we have to offer.',
   login: 'Login',
@@ -11,6 +12,12 @@ export default {
   enter_email: 'Enter your email',
   register: 'Register',
   log_in_to_your_account: 'Log in to your account',
+  // Register page
+  register_page_title: 'Let\'s create an account',
+  register_page_sub_title: 'You\'re just a few keystrokes away from finding your dream job.',
+  already_an_account: 'Got an account? Login',
+  register_button: 'Yes, create an account',
+  generate_password: 'Generate a password here',
   // account
   account: 'Account',
   reset_password: 'Reset password',

@@ -4,7 +4,7 @@
       <label class="input__label">
         <slot name="label" />
       </label>
-      <a :href="to" class="input__help">
+      <a :target="target" :href="to" class="input__help">
         <slot name="help" />
       </a>
     </div>
@@ -39,6 +39,10 @@ export default {
     to: {
       type: String,
       default: '#'
+    },
+    target: {
+      type: String,
+      default: ''
     },
     value: {
       type: String,
