@@ -1,5 +1,15 @@
 export const state = () => ({
-  user: {}
+  user: {
+    email: '',
+    phone: '',
+    postal_code: '',
+    house_number: '',
+    add_on: '',
+    street: '',
+    city: '',
+    name: '',
+    surname: ''
+  }
 })
 
 export const mutations = {
