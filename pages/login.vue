@@ -15,22 +15,37 @@
         <template slot="linkLabel">
           {{ translate('no_account') }}
         </template>
-
-        <input-default v-model="email" name="email" :placeholder="translate('enter_email')">
-          <template slot="label">
-            {{ translate('email_address') }}
-          </template>
-        </input-default>
-
-        <input-default v-model="password" to="/forgot-password" name="password" type="password" :placeholder="translate('enter_password')">
-          <template slot="label">
-            {{ translate('password') }}
-          </template>
-          <template slot="help">
-            {{ translate('forgot_password') }}
-          </template>
-        </input-default>
-
+        <input-validator
+          :rules="[
+            { type: 'required', message: translate('required', translate('email_address')) },
+            { type: 'email', message: translate('invalid', translate('email_address')) },
+            { type: 'minLength', rule: 2, message: translate('min_length', 2) },
+            { type: 'maxLength', rule: 255, message: translate('max_length', 255) }
+          ]"
+          :message="translate('validation_errors', translate('email_address'))"
+        >
+          <input-default v-model="email" name="email" :placeholder="translate('enter_email')">
+            <template slot="label">
+              {{ translate('email_address') }}
+            </template>
+          </input-default>
+        </input-validator>
+        <input-validator
+          :rules="[
+            { type: 'required', message: translate('required', translate('password')) },
+            { type: 'minLength', rule: 12, message: translate('min_length', 12) },
+          ]"
+          :message="translate('validation_errors', translate('password'))"
+        >
+          <input-default v-model="password" to="/forgot-password" name="password" type="password" :placeholder="translate('enter_password')">
+            <template slot="label">
+              {{ translate('password') }}
+            </template>
+            <template slot="help">
+              {{ translate('forgot_password') }}
+            </template>
+          </input-default>
+        </input-validator>
         <button slot="button" class="button__main button__main--hover" @click="login()">
           {{ translate('login_button') }}
         </button>
@@ -43,9 +58,11 @@
 import AuthBox from '../components/auth/AuthBox'
 import PageHeader from '../components/auth/PageHeader'
 import InputDefault from '../components/form/InputDefault'
+import InputValidator from '../components/form/InputValidator'
 
 export default {
   components: {
+    InputValidator,
     InputDefault,
     PageHeader,
     AuthBox
