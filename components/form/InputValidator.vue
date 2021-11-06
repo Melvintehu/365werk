@@ -57,17 +57,6 @@
     }
   }
 }
-.slide-fade-down-enter-active {
-  transition: all .3s ease;
-}
-.slide-fade-down-leave-active {
-  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-}
-.slide-fade-down-enter, .slide-fade-down-leave-to
-  /* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateY(-10px);
-  opacity: 0;
-}
 </style>
 <script>
 import email from '~/mixins/validators/email'
