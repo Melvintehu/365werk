@@ -20,15 +20,15 @@
               d="M15,5l-1.41,1.41L18.17,11H2V13h16.17l-4.59,4.59L15,19l7-7L15,5z"
             /></svg>
           </account-page-nav-item>
-          <account-page-nav-item to="#preferences">
-            {{ translate('preferences') }}
-          </account-page-nav-item>
-          <account-page-nav-item to="#work-experience">
-            {{ translate('work_experience') }}
-          </account-page-nav-item>
-          <account-page-nav-item to="#educations">
-            {{ translate('educations') }}
-          </account-page-nav-item>
+<!--          <account-page-nav-item to="#preferences">-->
+<!--            {{ translate('preferences') }}-->
+<!--          </account-page-nav-item>-->
+<!--          <account-page-nav-item to="#work-experience">-->
+<!--            {{ translate('work_experience') }}-->
+<!--          </account-page-nav-item>-->
+<!--          <account-page-nav-item to="#educations">-->
+<!--            {{ translate('educations') }}-->
+<!--          </account-page-nav-item>-->
         </div>
         <!-- Page content-->
         <page-content>
