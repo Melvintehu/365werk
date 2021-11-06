@@ -28,7 +28,21 @@ export default {
 
     type: {
       type: String,
-      default: 'text'
+      default: 'text',
+      validator (value) {
+        return [
+          'text',
+          'password',
+          'email',
+          'tel',
+          'time',
+          'url',
+          'week',
+          'number',
+          'month',
+          'date'
+        ].includes(value)
+      }
     },
 
     placeholder: {

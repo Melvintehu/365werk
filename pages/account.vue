@@ -3,7 +3,7 @@
     <the-side-nav />
     <div class="page">
       <!--Page top bar-->
-      <top-bar />
+      <the-top-bar />
       <div class="page-inner">
         <!--Page nav-->
         <div class="page-inner__nav">
@@ -29,7 +29,7 @@
 </template>
 <script>
 import TheSideNav from '../components/account/TheSideNav'
-import TopBar from '../components/account/TopBar'
+import TheTopBar from '../components/account/TheTopBar'
 import AccountPageNavItem from '../components/account/AccountPageNavItem'
 import ThePersonalDetailsForm from '../components/account/ThePersonalDetailsForm'
 
@@ -37,7 +37,7 @@ export default {
   components: {
     ThePersonalDetailsForm,
     AccountPageNavItem,
-    TopBar,
+    TheTopBar,
     TheSideNav
   },
   layout: 'account',
