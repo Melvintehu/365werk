@@ -1,3 +1,5 @@
+import Helper from '~/support/Helper'
+
 export const state = () => ({
   user: {
     email: '',
@@ -27,8 +29,8 @@ export const actions = {
           'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: JSON.stringify({
-          email: credentials.email,
-          password: credentials.password
+          email: Helper.sanitize(credentials.email),
+          password: Helper.sanitize(credentials.password)
         })
       }).then((response) => {
         response.json().then((data) => {
@@ -56,6 +58,9 @@ export const actions = {
   },
   updateUser ({ commit }, userData) {
     return new Promise((resolve, reject) => {
+      Object.keys(userData).forEach((key) => {
+        userData[key] = Helper.sanitize(userData[key])
+      })
       localStorage.setItem('user', JSON.stringify(userData))
       commit('setUser', userData)
       resolve()
