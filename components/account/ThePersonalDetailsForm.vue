@@ -11,11 +11,11 @@
         <div class="content__form-group">
           <input-validator
             :rules="[
-                    { type: 'required', message: translate('required', translate('email_address')) },
-                    { type: 'email', message: translate('invalid', translate('email_address')) },
-                    { type: 'minLength', rule: 2, message: translate('min_length', 2) },
-                    { type: 'maxLength', rule: 255, message: translate('max_length', 255) }
-                  ]"
+              { type: 'required', message: translate('required', translate('email_address')) },
+              { type: 'email', message: translate('invalid', translate('email_address')) },
+              { type: 'minLength', rule: 2, message: translate('min_length', 2) },
+              { type: 'maxLength', rule: 255, message: translate('max_length', 255) }
+            ]"
             :message="translate('validation_errors', translate('email_address'))"
           >
             <input-default v-model="user.email" name="email" :placeholder="translate('placeholder_email')">
@@ -26,9 +26,9 @@
           </input-validator>
           <input-validator
             :rules="[
-                    { type: 'required', message: translate('required', translate('phone_number')) },
-                    { type: 'phoneNumber', message: translate('invalid', `${translate('phone_number')} (+31612345678)`) }
-                  ]"
+              { type: 'required', message: translate('required', translate('phone_number')) },
+              { type: 'phoneNumber', message: translate('invalid', `${translate('phone_number')} (+31612345678)`) }
+            ]"
             :message="translate('validation_errors', translate('phone_number'))"
           >
             <input-default v-model="user.phone" name="phone" :placeholder="translate('placeholder_phone_number')">
@@ -49,9 +49,9 @@
           <div class="content__form-group">
             <input-validator
               :rules="[
-                      { type: 'required', message: 'Postal code is required.' },
-                      { type: 'postalCode', message: 'Postal code is invalid. (1234 AB)' }
-                    ]"
+                { type: 'required', message: 'Postal code is required.' },
+                { type: 'postalCode', message: 'Postal code is invalid. (1234 AB)' }
+              ]"
               :message="translate('validation_errors', translate('postal_code'))"
             >
               <input-default v-model="user.postal_code" name="postal_code" placeholder="1234 AB">
@@ -64,9 +64,9 @@
           <div class="content__form-address-house-details">
             <input-validator
               :rules="[
-                      { type: 'required', message: 'House number is required.' },
-                      { type: 'number', message: 'House number should only contain numbers. (12)' },
-                    ]"
+                { type: 'required', message: 'House number is required.' },
+                { type: 'number', message: 'House number should only contain numbers. (12)' },
+              ]"
               :message="translate('validation_errors', translate('house_number'))"
             >
               <input-default v-model="user.house_number" name="house_number" placeholder="123">
@@ -77,8 +77,8 @@
             </input-validator>
             <input-validator
               :rules="[
-                      { type: 'letter', message: 'House number add on should only contain letters. (A)' },
-                    ]"
+                { type: 'letter', message: 'House number add on should only contain letters. (A)' },
+              ]"
               :message="translate('validation_errors', translate('house_number_add_on'))"
             >
               <input-default v-model="user.add_on" name="add_on" placeholder="A">
@@ -92,10 +92,10 @@
         <div class="content__form-group">
           <input-validator
             :rules="[
-                    { type: 'required', message: 'Street is required.' },
-                    { type: 'minLength', rule: 1, message: 'Street has a minimum of 1 characters.' },
-                    { type: 'maxLength', rule: 55, message: 'Street has a maximum of 55 characters.' }
-                  ]"
+              { type: 'required', message: 'Street is required.' },
+              { type: 'minLength', rule: 1, message: 'Street has a minimum of 1 characters.' },
+              { type: 'maxLength', rule: 55, message: 'Street has a maximum of 55 characters.' }
+            ]"
             :message="translate('validation_errors', translate('street'))"
           >
             <input-default v-model="user.street" name="street" :placeholder="translate('placeholder_street')">
@@ -106,10 +106,10 @@
           </input-validator>
           <input-validator
             :rules="[
-                    { type: 'required', message: 'City is required.' },
-                    { type: 'minLength', rule: 2, message: 'City has a minimum of 2 characters.' },
-                    { type: 'maxLength', rule: 25, message: 'City has a maximum of 25 characters.' }
-                  ]"
+              { type: 'required', message: 'City is required.' },
+              { type: 'minLength', rule: 2, message: 'City has a minimum of 2 characters.' },
+              { type: 'maxLength', rule: 25, message: 'City has a maximum of 25 characters.' }
+            ]"
             :message="translate('validation_errors', translate('city'))"
           >
             <input-default v-model="user.city" name="city" :placeholder="translate('placeholder_city')">
@@ -129,10 +129,10 @@
         <div class="content__form-group">
           <input-validator
             :rules="[
-                    { type: 'required', message: 'Your name is required.' },
-                    { type: 'minLength', rule: 1, message: 'Name has a minimum of 1 characters.' },
-                    { type: 'maxLength', rule: 255, message: 'Name has a maximum of 255 characters.' }
-                  ]"
+              { type: 'required', message: 'Your name is required.' },
+              { type: 'minLength', rule: 1, message: 'Name has a minimum of 1 characters.' },
+              { type: 'maxLength', rule: 255, message: 'Name has a maximum of 255 characters.' }
+            ]"
             :message="translate('validation_errors', translate('name'))"
           >
             <input-default v-model="user.name" name="name" :placeholder="translate('placeholder_name')">
@@ -143,10 +143,10 @@
           </input-validator>
           <input-validator
             :rules="[
-                    { type: 'required', message: 'Your surname is required.' },
-                    { type: 'minLength', rule: 1, message: 'Surname has a minimum of 1 characters.' },
-                    { type: 'maxLength', rule: 255, message: 'Surname has a maximum of 255 characters.' }
-                  ]"
+              { type: 'required', message: 'Your surname is required.' },
+              { type: 'minLength', rule: 1, message: 'Surname has a minimum of 1 characters.' },
+              { type: 'maxLength', rule: 255, message: 'Surname has a maximum of 255 characters.' }
+            ]"
             :message="translate('validation_errors', translate('surname'))"
           >
             <input-default v-model="user.surname" name="surname" :placeholder="translate('placeholder_surname')">
