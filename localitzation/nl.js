@@ -54,5 +54,10 @@ export default {
   required: ':attribute is verplicht.',
   invalid: ':attribute is niet correct.',
   min_length: 'Minimaal :attribute karakters zijn verplicht.',
-  max_length: 'Meer dan :attribute karaters is niet toegestaan.'
+  max_length: 'Meer dan :attribute karaters is niet toegestaan.',
+  // modal
+  cancel: 'Annuleren',
+  proceed: 'Doorgaan',
+  log_out_confirm_title: 'Weet je het zeker?',
+  log_out_confirm_description: 'Je staat op het punt om uit te loggen, na het uitloggen zijn al je demogegevens verwijderd.'
 }

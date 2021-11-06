@@ -54,5 +54,10 @@ export default {
   required: ':attribute is required.',
   invalid: ':attribute is invalid.',
   min_length: 'A minimal of :attribute characters is mandatory.',
-  max_length: 'Cannot contain more than :attribute characters.'
+  max_length: 'Cannot contain more than :attribute characters.',
+  // modal
+  cancel: 'Cancel',
+  proceed: 'Proceed',
+  log_out_confirm_title: 'Eh, are you sure?',
+  log_out_confirm_description: 'Are you sure you wanna log out? Your demo data will be lost.'
 }

@@ -12,10 +12,10 @@
         </div>
         <div class="modal__actions">
           <button class="modal__cancel" @click="cancel">
-            Cancel
+            {{ translate('cancel') }}
           </button>
           <button class="modal__proceed" @click="proceed">
-            Proceed
+            {{ translate('proceed') }}
           </button>
         </div>
       </div>

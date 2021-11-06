@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     logout () {
-      this.confirm('Eh, are you sure?', 'Are you sure you wanna log out? Your demo data will be lost.').then(() => {
+      this.confirm(this.translate('log_out_confirm_title'), this.translate('log_out_confirm_description')).then(() => {
         this.$store.dispatch('auth/logout').then(() => {
           this.$router.push('/login')
         })
