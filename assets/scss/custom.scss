@@ -340,18 +340,19 @@
       margin: 0 0 1rem 0;
     }
     &__progress-bar {
-      background: white;
-      border: 1px solid $blue-gray;
+      border: 1px solid $blue-gray-darker;
       border-radius: 999px;
       height: 1rem;
       width: 100%;
       margin: 0.5rem 0;
       overflow: hidden;
 
-      &-fill {
+      &::-webkit-progress-bar {
+        background: white;
+      }
+
+      &::-webkit-progress-value {
         background: $orange;
-        width: 30%;
-        height: 100%;
       }
     }
 

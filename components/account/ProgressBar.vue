@@ -8,14 +8,20 @@
         {{ translate('account_progress_sub_title') }}
       </p>
     </div>
-    <div class="account-progress__progress-bar">
-      <div class="account-progress__progress-bar-fill"></div>
-    </div>
+    <progress class="account-progress__progress-bar" :value="percentage" max="100" />
     <p class="account-progress__percentage">
-      30%
+      {{ percentage }}%
     </p>
   </div>
 </template>
 <script>
-export default {}
+import { mapGetters } from 'vuex'
+
+export default {
+  computed: {
+    ...mapGetters({
+      percentage: 'auth/getAccountProgress'
+    })
+  }
+}
 </script>

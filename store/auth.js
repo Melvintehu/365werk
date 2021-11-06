@@ -32,7 +32,11 @@ export const actions = {
         })
       }).then((response) => {
         response.json().then((data) => {
-          const user = { email: data.email, name: data.name, phone: data.phone }
+          const user = {
+            email: data.email,
+            name: data.name,
+            phone: data.phone
+          }
           localStorage.setItem('user', JSON.stringify(user))
           commit('setUser', user)
 
@@ -66,5 +70,12 @@ export const getters = {
   },
   getUser: (state) => {
     return state.user
+  },
+  getAccountProgress: (state) => {
+    let user = Object.values(state.user)
+    user = user.filter((property) => {
+      return property !== null && property !== undefined && property !== ''
+    })
+    return Math.round((100 / 9) * user.length)
   }
 }
