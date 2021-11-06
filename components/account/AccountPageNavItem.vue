@@ -8,11 +8,6 @@
     </span>
   </div>
 </template>
-<style>
-a.nuxt-link-active {
-  font-weight: 700;
-}
-</style>
 <script>
 export default {
   props: {

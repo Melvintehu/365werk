@@ -11,53 +11,10 @@
       </div>
     </transition>
     <div ref="input" class="input-validator__input-wrapper">
-      <slot/>
+      <slot />
     </div>
-
   </div>
 </template>
-<style lang="scss">
-.on-top {
-  z-index: 50;
-}
-.input-validator {
-  position: relative;
-
-  &__input-wrapper {
-    position: relative;
-  }
-
-  &__message {
-    display: block;
-    background: #ED6B00;
-    color: white;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    font-size: 12px;
-    min-height: 48px;
-    width: 100%;
-    padding: 16px;
-    position: absolute;
-    top: 56px;
-    left: 0;
-
-    ul {
-      padding: 8px 16px 0 0;
-      margin: 0;
-      text-decoration: none;
-      list-style-type: none;
-    }
-
-    li {
-      padding: 4px 0;
-    }
-
-    li:first-child {
-      font-weight: 700;
-    }
-  }
-}
-</style>
 <script>
 import email from '~/mixins/validators/email'
 import required from '~/mixins/validators/required'
@@ -149,3 +106,45 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+.on-top {
+  z-index: 50;
+}
+.input-validator {
+  position: relative;
+
+  &__input-wrapper {
+    position: relative;
+  }
+
+  &__message {
+    display: block;
+    background: #ED6B00;
+    color: white;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size: 12px;
+    min-height: 48px;
+    width: 100%;
+    padding: 16px;
+    position: absolute;
+    top: 56px;
+    left: 0;
+
+    ul {
+      padding: 8px 16px 0 0;
+      margin: 0;
+      text-decoration: none;
+      list-style-type: none;
+    }
+
+    li {
+      padding: 4px 0;
+    }
+
+    li:first-child {
+      font-weight: 700;
+    }
+  }
+}
+</style>
