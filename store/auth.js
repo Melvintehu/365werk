@@ -73,10 +73,10 @@ export const getters = {
     const user = localStorage.getItem('user')
     return user !== null
   },
-  getUser: (state) => {
-    return state.user
-  },
   getAccountProgress: (state) => {
+    if (state.user === null || state.user === undefined) {
+      return 0
+    }
     let user = Object.values(state.user)
     user = user.filter((property) => {
       return property !== null && property !== undefined && property !== ''
