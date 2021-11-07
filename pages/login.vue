@@ -40,7 +40,7 @@
           ]"
             :message="translate('validation_errors', translate('password'))"
           >
-            <input-default v-model="password" to="/forgot-password" name="password" type="password" :placeholder="translate('enter_password')">
+            <input-default v-model="password" to="#forgot-password" name="password" type="password" :placeholder="translate('enter_password')">
               <template slot="label">
                 {{ translate('password') }}
               </template>
