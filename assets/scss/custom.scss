@@ -8,11 +8,11 @@
 
   /* AUTH */
   .auth-page {
-    background: $blue-dark;
-    padding-bottom: 4rem;
+    background: $blue-darker;
+    //padding-bottom: 4rem;
   }
   .nav-wrapper {
-    background: $blue-dark;
+    background: $blue-darker;
   }
   .nav {
     display: flex;
@@ -564,6 +564,20 @@
       font-weight: 700;
       padding: 1rem 2rem;
       cursor: pointer;
+    }
+  }
+
+  .page-waves {
+    width: 100%;
+
+    &__wrapper {
+      width: 100%;
+
+      img {
+        width: 100%;
+        position: relative;
+        bottom: 1px;
+      }
     }
   }
 
