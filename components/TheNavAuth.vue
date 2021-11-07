@@ -3,7 +3,9 @@
   <div class="nav-wrapper">
     <nav class="container nav">
       <NuxtLink class="nav-link__logo" to="/login">
-        365werk
+        <figure class="nav-link__logo-img">
+          <img src="~/assets/img/logos/svg/365werk.svg">
+        </figure>
       </NuxtLink>
       <div class="nav__right">
         <div class="nav__right-language-switch-wrapper">

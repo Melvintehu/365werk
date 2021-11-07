@@ -25,6 +25,10 @@
 
       &__logo {
         color: white;
+
+        &-img img{
+          width: 3rem;
+        }
       }
 
       &__default {
