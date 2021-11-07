@@ -17,7 +17,7 @@ export default {
   register_page_sub_title: 'Ga gauw door, een account is zo gemaakt!',
   already_an_account: 'Al een account? Inloggen',
   register_button: 'Ja, account aanmaken',
-  generate_password: 'Wachtwoord nodig? Genereer hier één.',
+  generate_password: 'Genereer hier één',
   // account
   account: 'Account',
   reset_password: 'Wijzig wachtwoord',

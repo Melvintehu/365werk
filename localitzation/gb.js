@@ -17,7 +17,7 @@ export default {
   register_page_sub_title: 'You\'re just a few keystrokes away from finding your dream job.',
   already_an_account: 'Got an account? Login',
   register_button: 'Yes, create an account',
-  generate_password: 'Generate a password here',
+  generate_password: 'Generate a password',
   // account
   account: 'Account',
   reset_password: 'Reset password',
