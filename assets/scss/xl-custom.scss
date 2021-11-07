@@ -14,12 +14,16 @@
 
   .page {
     &-top-bar {
+      display: flex;
+      justify-content: start;
       &__left {
         width: 50%;
+        max-width: 745px;
       }
 
       &__right {
         width: 50%;
+        max-width: 715px;
       }
     }
   }
